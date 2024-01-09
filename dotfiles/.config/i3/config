@@ -183,6 +183,8 @@ assign [class="mcpelauncher-client"] $ws8
 assign [class="Spotify"] $ws9
 assign [class="discord"] $ws9
 assign [class="zoom"] $ws10
+assign [class="transmission-gtk"] $ws10
+assign [class="Transmission-gtk"] $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -332,3 +334,7 @@ exec --no-startup-id obsidian
 
 # xborders
 # exec --no-startup-id xborders --smart-hide-border --border-radius 8 --border-width 3 --border-rgba '#A7C080'
+
+# Suspensión por inactividad
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
