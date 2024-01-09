@@ -1,0 +1,488 @@
+snippet phy-art "Physics article" A
+\documentclass[letterpaper]{article} %Artículo tamaño carta
+\usepackage[left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm,headheight=1.0cm]{geometry} %Márgenes
+\usepackage[utf8]{inputenc} %Formato de codificación
+\usepackage[table]{xcolor} %Tablas con color
+\usepackage{siunitx} %Unidades del SI
+\usepackage[activeacute,spanish,es-tabla]{babel} %Acentos, 'Figura' para gráficas y 'Tabla' para tablas
+\usepackage{amsthm} %Símbolos
+\usepackage{amsmath} %Símbolos
+\usepackage{amssymb} %Símbolos
+\usepackage{tikz} %Paquete tikz para diagramas
+\usepackage{pgfplots} %Gráficas
+\usepackage{wrapfig} %Insertar imágenes junto a párrafos
+\usepackage{multirow, array} %Multifilas para tablas
+\usepackage{float} %Comportamiento de tablas
+\usepackage[hyphens]{url} %URL's en referencias
+\usepackage[hidelinks]{hyperref} %URL's
+\usepackage{bookmark} %Bookmarks
+\usepackage[nottoc]{tocbibind} %Referencias en el índice
+\usepackage{multicol} %Multicolumnas
+\usepackage{titlesec} %Estilo de secciones
+\usepackage{cleveref} %Nombres para captionof
+\usepackage{booktabs} %Estilo de tablas
+\usepackage{caption} %Descripciones
+\usepackage[sort]{natbib} %Ordenar referencias por orden de aparición
+\usepackage{enumitem} %Listas
+\usepackage{fancyhdr} %Línea horizontal del encabezado
+
+\pagestyle{fancy} %Estilo de encabezado y pie de página para todo el documento
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\scshape{\hspace{0.8cm} $1}}
+\renewcommand{\headruleskip}{2mm}
+\fancyheadoffset{0.8cm}
+
+\decimalpoint %Usar punto decimal
+
+\pgfplotsset{compat=1.18,ytick style={draw=none},xtick style={draw=none},width=9.0cm,height=8.3cm} %Tamaño de las gráficas
+
+\titleformat{\section} %Estilo de las secciones
+{\centering\large\scshape}{\thesection.}{0.5em}{}
+\titleformat{\subsection} %Estilo de las subsecciones
+{\centering\scshape}{\thesubsection.}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{0.3cm}{0.3cm} %Espaciado para las secciones
+\titlespacing*{\subsection}{0pt}{0.3cm}{0.3cm} %Espaciado para las subsecciones
+
+\setcitestyle{square,comma,numbers} %Estilo de referencias
+
+\hypersetup{breaklinks=true} %Insertar saltos de línea en ULR's
+
+\setlength{\textfloatsep}{0.1cm} %Espacio para floats
+
+\definecolor{gris}{HTML}{F0F0F0}
+
+\fancypagestyle{first} %Estilo de encabezado y pie de página para la página "first"
+{
+	\pagestyle{fancy}
+	\fancyhf{}
+	\rhead{\thepage\hspace{0.8cm}}
+	\lhead{\scshape{\hspace{0.8cm} $1}}
+}
+
+\date{\today}
+\author{}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\allowdisplaybreaks %Permitir saltos de página en modo matemático
+\makeatletter %Prevenir saltos de página en listas
+\def\adjustpenalty{\@beginparpenalty\@M \@itempenalty\@M}
+\makeatother 
+
+\linespread{1.2} %Interlineado
+\setlength\parindent{0pt} %Sangría de párrafos
+\setlength\columnsep{0.5cm} %Separación entre columnas
+%\setlength{\parskip}{0pt} %Separación entre párrafos
+
+\makeindex %Hacer el índice, no funciona con section*{}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\di}{\displaystyle}
+
+\numberwithin{equation}{section} %Ecuaciones numeradas por sección
+
+\begin{document}
+	\thispagestyle{first}
+
+	\begin{center}
+		\huge{\scshape{$2}}
+	\end{center}
+
+	\begin{center}
+
+	\end{center}
+
+	\vspace{0.3cm}
+
+	\begin{multicols}{2}
+		\section{$5}
+		
+		\par $6
+
+		%\renewcommand\bibname{Referencias}
+		%\bibliographystyle{siam}
+		%\Urlmuskip=0mu plus 1mu\relax
+		%\bibliography{bibliography}
+		%\phantom{\cite{}}	
+	\end{multicols}
+\end{document}
+endsnippet
+
+snippet math-art "Mathematics article" A
+\documentclass[letterpaper]{article} %Artículo tamaño carta \usepackage[left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm,headheight=1.0cm]{geometry} %Márgenes
+\usepackage[utf8]{inputenc} %Formato de codificación
+\usepackage[activeacute,spanish,es-tabla,es-lcroman]{babel} %Acentos, 'Figura' para gráficas y 'Tabla' para tablas
+\usepackage{amsthm} %Símbolos
+\usepackage{amsmath} %Símbolos
+\usepackage{amssymb} %Símbolos
+\usepackage{multirow} %Multifilas para tablas
+\usepackage[hyphens]{url} %URL's en referencias
+\usepackage[hidelinks]{hyperref} %URL's
+\usepackage{bookmark} %Bookmarks
+\usepackage[nottoc]{tocbibind} %Referencias en el índice
+\usepackage{multicol} %Multicolumnas
+\usepackage{titlesec} %Estilo de secciones
+\usepackage{cleveref} %Nombres para captionof
+\usepackage[sort]{natbib} %Ordenar referencias por orden de aparición
+\usepackage{enumitem} %Listas
+\usepackage{fancyhdr} %Línea horizontal del encabezado
+
+\pagestyle{fancy} %Estilo de encabezado y pie de página para todo el documento
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\scshape{\hspace{0.8cm} $1}}
+\renewcommand{\headruleskip}{2mm}
+\fancyheadoffset{0.8cm}
+
+\decimalpoint %Usar punto decimal
+
+\titleformat{\section} %Estilo de las secciones
+{\centering\large\scshape}{\thesection.}{0.5em}{}
+\titleformat{\subsection} %Estilo de las subsecciones
+{\centering\scshape}{\thesubsection.}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{0.3cm}{0.3cm} %Espaciado de las secciones
+\titlespacing*{\subsection}{0pt}{0.3cm}{0.3cm} %Espaciado de las subsecciones
+
+\setcitestyle{square,comma,numbers} %Estilo de referencias
+
+\hypersetup{breaklinks=true} %Insertar saltos de línea en ULR's
+
+\fancypagestyle{first} %Estilo de encabezado y pie de página para la página "first"
+{
+	\pagestyle{fancy}
+	\fancyhf{}
+	\rhead{\thepage\hspace{0.8cm}}
+	\lhead{\scshape{\hspace{0.8cm} $1}}
+}
+
+\date{\today}
+\author{}
+
+\makeindex %Hacer índice, no funciona con section*{}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\allowdisplaybreaks %Permitir saltos de página en modo matemático
+\makeatletter %Prevenir saltos de página en listas
+\def\adjustpenalty{\@beginparpenalty\@M \@itempenalty\@M}
+\makeatother 
+
+\linespread{1.2} %Interlineado
+\setlength\parindent{0pt} %Sangría de párrafos
+\setlength\columnsep{0.5cm} %Separación entre columnas
+%\setlength{\parskip}{0pt} %Separación entre párrafos
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\card}[1]{\text{Card}(#1)}
+\newcommand{\di}{\displaystyle}
+
+\newtheoremstyle{theorem}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Teorema [número] [nombre]
+\theoremstyle{theorem}
+\newtheorem{theorem}{Teorema}[section]
+
+\newtheoremstyle{proposition}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Proposición [número] [nombre]
+\theoremstyle{proposition}
+\newtheorem{proposition}{Proposición}[section]
+
+\newtheoremstyle{corollary}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Corolario[número] [nombre]
+\theoremstyle{corollary}
+\newtheorem{corollary}{Corolario}[theorem]
+
+\newtheoremstyle{lemma}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Lema [número] [nombre]
+\theoremstyle{lemma}
+\newtheorem{lemma}{Lema}[section]
+
+\newtheoremstyle{definition}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Definición [número] [nombre]
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+
+\newtheoremstyle{remark}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\rmfamily} %Fuente del cuerpo
+{0em} %Sangría
+{\itshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Observación [número] [nombre]
+\theoremstyle{remark}
+\newtheorem{remark}{Observación}[section]
+
+\newtheoremstyle{exercise}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\rmfamily} %Fuente del cuerpo
+{0em} %Sangría
+{\bfseries} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Ejercicio [número] [nombre]
+\theoremstyle{exercise}
+\newtheorem{exercise}{Ejercicio}
+
+\numberwithin{equation}{section} %Ecuaciones numeradas por sección
+
+\begin{document}
+	\thispagestyle{first}
+
+	\begin{center}
+		\huge{\scshape{$2}}
+	\end{center}
+
+	\begin{center}
+
+	\end{center}
+
+	\vspace{0.3cm}
+
+	$5%\begin{multicols}{2}
+	\section{$7}
+	
+	\par $8
+
+	%\renewcommand\bibname{Referencias}
+	%\bibliographystyle{siam}
+	%\Urlmuskip=0mu plus 1mu\relax
+	%\bibliography{bibliography}
+	%\phantom{\cite{}}	
+	$6%\end{multicols}
+\end{document}
+endsnippet
+
+snippet math-ex "Ejercicios" A
+\documentclass[letterpaper]{article} %Artículo tamaño carta
+\usepackage[left=2.0cm,right=2.0cm,top=2.5cm,bottom=1.5cm,headheight=1.0cm]{geometry} %Márgenes
+\usepackage[utf8]{inputenc} %Formato de codificación
+\usepackage[activeacute,spanish,es-tabla,es-lcroman]{babel} %Acentos, 'Figura' para gráficas y 'Tabla' para tablas
+\usepackage{amsthm} %Símbolos
+\usepackage{amsmath} %Símbolos
+\usepackage{amssymb} %Símbolos
+\usepackage{enumitem} %Listas
+\usepackage{fancyhdr} %Línea horizontal del encabezado
+
+\pagestyle{fancy} %Estilo de encabezado y pie de página para todo el documento
+\fancyhf{}
+\rhead{\thepage\hspace{0.8cm}}
+\renewcommand{\headruleskip}{2mm}
+\lhead{\scshape{\hspace{0.8cm} $1}}
+\renewcommand{\headruleskip}{2mm}
+\fancyheadoffset{0.8cm}
+
+\decimalpoint %Usar punto decimal
+
+\fancypagestyle{first} %Estilo de encabezado y pie de página para la página "first"
+{
+	\pagestyle{fancy}
+	\fancyhf{}
+	\rhead{\thepage\hspace{0.8cm}}
+	\lhead{\scshape{\hspace{0.8cm} $1}}
+}
+
+\date{\today}
+\author{}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\allowdisplaybreaks %Permitir saltos de página en modo matemático
+\makeatletter %Prevenir saltos de página en listas
+\def\adjustpenalty{\@beginparpenalty\@M \@itempenalty\@M}
+\makeatother 
+
+\linespread{1.2} %Interlineado
+\setlength\parindent{0pt} %Sangría de párrafos
+%\setlength{\parskip}{0pt} %Separación entre párrafos
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\card}[1]{\text{Card}(#1)}
+\newcommand{\di}{\displaystyle}
+
+\newtheoremstyle{theorem}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Teorema [número] [nombre]
+\theoremstyle{theorem}
+\newtheorem{theorem}{Teorema}
+
+\newtheoremstyle{proposition}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Proposición [número] [nombre]
+\theoremstyle{proposition}
+\newtheorem{proposition}{Proposición}
+
+\newtheoremstyle{corollary}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Corolario[número] [nombre]
+\theoremstyle{corollary}
+\newtheorem{corollary}{Corolario}
+
+\newtheoremstyle{lemma}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Lema [número] [nombre]
+\theoremstyle{lemma}
+\newtheorem{lemma}{Lema}
+
+\newtheoremstyle{definition}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\itshape} %Fuente del cuerpo
+{0em} %Sangría
+{\scshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Definición [número] [nombre]
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}
+
+\newtheoremstyle{remark}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\rmfamily} %Fuente del cuerpo
+{0em} %Sangría
+{\itshape} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Observación [número] [nombre]
+\theoremstyle{remark}
+\newtheorem{remark}{Observación}
+
+\newtheoremstyle{exercise}
+{\topsep} %Separación superior
+{\topsep} %Separación inferior
+{\rmfamily} %Fuente del cuerpo
+{0em} %Sangría
+{\bfseries} %Fuente del encabezado
+{.} %Puntuación después del encabezado
+{0.5em} %Espacio después del encabezado
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} %Ejercicio [número] [nombre]
+\theoremstyle{exercise}
+\newtheorem{exercise}{Ejercicio}
+
+\begin{document}
+	\thispagestyle{first}
+
+	\begin{center}
+		\huge{\scshape{$2}}
+	\end{center}
+
+	\begin{center}
+
+	\end{center}
+
+	\vspace{0.3cm}
+
+	\begin{exercise}
+		$5
+	\end{exercise}
+\end{document}
+endsnippet
+
+snippet min-art "Minimal article" A
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{libertine}
+\usepackage{libertinust1math}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\title{$1}
+\author{$2}
+
+\begin{document}
+\maketitle$3
+
+\end{document}
+endsnippet
+
+snippet min-writing "Minimal writing template" A
+\documentclass{article}
+\usepackage{ebgaramond}
+\usepackage{libertinust1math}
+
+\title{$1}
+\author{$2}
+
+\begin{document}
+\maketitle$3
+
+\end{document}
+endsnippet

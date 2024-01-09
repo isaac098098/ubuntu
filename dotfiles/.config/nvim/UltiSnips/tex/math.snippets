@@ -1,0 +1,491 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal
+
+context "math()"
+snippet ff "Math mode fraction" iA
+\frac{$1}{$2}
+endsnippet
+
+context "math()"
+snippet ' "Superscript" iA
+^{$1}
+endsnippet
+
+context "math()"
+snippet ; "Subscript" iA
+_{$1}
+endsnippet
+
+context "math()"
+snippet sq "Square root" iA
+\sqrt{$1}
+endsnippet
+
+context "math()"
+snippet sm "Sum" iA
+\sum_{$1}^{$2} $3 $0
+endsnippet
+
+context "math()"
+snippet sf "Math mode infinite sum" iA
+\sum_{$1}^{\infty} $2 $0
+endsnippet
+
+context "math()"
+snippet ind "Definite integral" iA
+\int_{$1}^{$2} $3 \textrm{d}$4 $0
+endsnippet
+
+context "math()"
+snippet ini "Indefinite integral" iA
+\int $1 \textrm{d}$2 $0
+endsnippet
+
+context "math()"
+snippet inu "Upper improper integral" iA
+\int_{$1}^{\infty} $2 \text{d}$3 $0
+endsnippet
+
+context "math()"
+snippet inl "Lower improper integral" iA
+\int_{-\infty}^{$1} $2 \text{d}$3 $0
+endsnippet
+
+context "math()"
+snippet int "Totally improper integral" iA
+\int_{-\infty}^{\infty} $1 \text{d}$3 $0
+endsnippet
+
+context "math()"
+snippet oio "Open interval" iA
+\: ]$1[$0
+endsnippet
+
+context "math()"
+snippet cic " Closed interval" iA
+\: ]$1[$0
+endsnippet
+
+context "math()"
+snippet cio "Left closed and right opened interval" iA
+[$1[ \: $0
+endsnippet
+
+context "math()"
+snippet oic "Right closed and left opened interval" iA
+\: ]$1]$0
+endsnippet
+
+context "math()"
+snippet mp "Function definition" iA
+
+
+\begin{align*}
+	$1:$2 & \longrightarrow $3 \\
+	$4 & \longmapsto $5
+\end{align*}
+endsnippet
+
+context "math()"
+snippet fn "Function" iA
+$1: $2 \longrightarrow $3 $0
+endsnippet
+
+context "math()"
+snippet ef "Explicit function" iA
+$1 \longmapsto $2 $0
+endsnippet
+
+context "math()"
+snippet fc "Function defined by cases" iA
+
+
+\begin{equation*}
+	$1 =
+		\begin{cases}
+			$2 & \text{si} \: $3 \\\\ %\hfil
+			$4 & \text{si} \: $5
+		\end{cases}
+\end{equation*}
+endsnippet
+
+context "math()"
+snippet ap "Parenthesis" iA
+\left($1\right)$2
+endsnippet
+
+context "math()"
+snippet ab "Brackets" iA
+\left\\{$1\right\\}$2
+endsnippet
+
+context "math()"
+snippet as "Square brackets" iA
+\left[$1\right]$2
+endsnippet
+
+context "math()"
+snippet set "Set" iA
+\left\\{$1 \: | \: $2\right\\}
+endsnippet
+
+context "math()"
+snippet | "Absolute value " iA
+|$1|
+endsnippet
+
+context "math()"
+snippet fa "For all" iA
+\forall \: $1
+endsnippet
+
+context "math()"
+snippet ls "Limit of a sequence" iA
+\lim_{$1\to\infty} $2
+endsnippet
+
+context "math()"
+snippet lf "Limit of a function" iA
+\lim_{$1\to $2} $3
+endsnippet
+
+context "math()"
+snippet sup "Subindex supremum" iA
+\sup_{$1} $2
+endsnippet
+
+context "math()"
+snippet inf "SUbidnex infimum" iA
+\inf_{$1} $2
+endsnippet
+
+context "math()"
+snippet seq "Sequence" iA
+\left\\{$1_{$2}\right\\}_{$2=$3}^{\infty}
+endsnippet
+
+context "math()"
+snippet to "Arrow limit notation" i
+\xrightarrow[${1:lower}]{${2:upper}} $3
+endsnippet
+
+context "math()"
+snippet av "Absolute value" iA
+\left|$1\right|
+endsnippet
+
+context "math()"
+snippet .a "Lowercase alpha" iA
+\alpha
+endsnippet
+
+context "math()"
+snippet .b "Lowercase beta" iA
+\beta
+endsnippet
+
+context "math()"
+snippet .g "Lowercase gamma" iA
+\gamma
+endsnippet
+
+context "math()"
+snippet .G "Capital gamma" iA
+\Gamma
+endsnippet
+
+context "math()"
+snippet .d "Lowercase delta" iA
+\delta
+endsnippet
+
+context "math()"
+snippet .D "Capital delta" iA
+\Delta
+endsnippet
+
+context "math()"
+snippet .e "Lowercase epislon" iA
+\varepsilon
+endsnippet
+
+context "math()"
+snippet .z "Lowercase zeta" iA
+\zeta
+endsnippet
+
+context "math()"
+snippet .n "Lowercase eta" iA
+\eta
+endsnippet
+
+context "math()"
+snippet .ht "Lowercase theta" iA
+\theta
+endsnippet
+
+context "math()"
+snippet .hT "Capital eta" iA
+\Theta
+endsnippet
+
+context "math()"
+snippet .i "Lowercase iota" i
+\iota
+endsnippet
+
+context "math()"
+snippet .k "Lowercase kappa" iA
+\kappa
+endsnippet
+
+context "math()"
+snippet .l "Lowercase lambda" iA
+\lambda
+endsnippet
+
+context "math()"
+snippet .L "Capital lambda" iA
+\Lambda
+endsnippet
+
+context "math()"
+snippet .m "Lowercase mu" iA
+\mu
+endsnippet
+
+context "math()"
+snippet .v "Lowercase nu" iA
+\nu
+endsnippet
+
+context "math()"
+snippet .x "Lowercase xi" iA
+\xi
+endsnippet
+
+context "math()"
+snippet .X "Capital xi" iA
+\Xi
+endsnippet
+
+context "math()"
+snippet .p "Lowercase pi" iA
+\pi
+endsnippet
+
+context "math()"
+snippet .P "Capital pi" iA
+\Pi
+endsnippet
+
+context "math()"
+snippet .r "Lowercase rho" iA
+\rho
+endsnippet
+
+context "math()"
+snippet .s "Lowercase sigma" iA
+\sigma
+endsnippet
+
+context "math()"
+snippet .S "Capital sigma" iA
+\Sigma
+endsnippet
+
+context "math()"
+snippet .t "Lowercase tau" iA
+\tau
+endsnippet
+
+context "math()"
+snippet .u "Lowercase upsilon" iA
+\upsilon
+endsnippet
+
+context "math()"
+snippet .U "Capital upsilon" iA
+\Upsilon
+endsnippet
+
+context "math()"
+snippet .hp "Lowercase phi" iA
+\phi
+endsnippet
+
+context "math()"
+snippet .hP "Capital phi" iA
+\Phi
+endsnippet
+
+context "math()"
+snippet .ch "Lowercase chi" iA
+\chi
+endsnippet
+
+context "math()"
+snippet .sp "Lowercase psi" iA
+\psi
+endsnippet
+
+context "math()"
+snippet .sP "Capital psi" iA
+\Psi
+endsnippet
+
+context "math()"
+snippet .o "Lowercase omega" iA
+\omega
+endsnippet
+
+context "math()"
+snippet .O "Capital omega" iA
+\Omega
+endsnippet
+
+context "math()"
+snippet bi "Intersection" iA
+\bigcap_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet bu "Union" iA
+\bigcup_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet na "In naturals" iA
+$1\in\N
+endsnippet
+
+context "math()"
+snippet fy "Infinity" iA
+\infty
+endsnippet
+
+context "math()"
+snippet ms "Set difference" iA
+\setminus 
+endsnippet
+
+context "math()"
+snippet sbs "Subset" iA
+\subset 
+endsnippet
+
+context "math()"
+snippet sbq "Subset or equal" iA
+\subseteq 
+endsnippet
+
+context "math()"
+snippet cr "Overline" iA
+\overline{$1}
+endsnippet
+
+context "math()"
+snippet mx "Maximum of a set" iA
+\max\left\\{$1\right\\}
+endsnippet
+
+context "math()"
+snippet mn "Minimum of a set" iA
+\min\left\\{$1\right\\}
+endsnippet
+
+context "math()"
+snippet cn "Numerable/finite family" iA
+\left\\{$1_\{$2\}\right\\}_\{$2=$3\}^\{$4\}
+endsnippet
+
+context "math()"
+snippet ci "Indexed family" iA
+\left\\{$1_\{$2\}\right\\}_\{$2\in $3\}$4
+endsnippet
+
+context "math()"
+snippet lb "Label equation" iA
+\label{eqn:$1}
+endsnippet
+
+context "math()"
+snippet eqr "Equation reference" iA
+\eqref{eqn:$1}
+endsnippet
+
+context "math()"
+snippet nmt "Number this" iA
+\numberthis
+endsnippet
+
+context "math()"
+snippet sd "Symmetric difference" iA
+$1\triangle $2
+endsnippet
+
+context "math()"
+snippet ev "Equivalent" iA
+\equiv$1
+endsnippet
+
+context "math()"
+snippet mod "Equivalence mod n" iA
+$1\equiv $2 \\:\\:(\textrm{mod }$3)
+endsnippet
+
+context "math()"
+snippet bm "Binomial coefficient" iA
+\binom{$1}{$2}
+endsnippet
+
+context "math()"
+snippet vac "Empty set" iA
+\varnothing 
+endsnippet
+
+context "math()"
+snippet vert "Norm" iA
+\lVert $1 \rVert $2
+endsnippet
+
+snippet ca "\cancel{}" i
+\cancel{$1}
+endsnippet
+
+context "math()"
+snippet hs "Horizontal space" iA
+\hspace*{$1.$2cm}
+endsnippet
+
+context "math()"
+snippet cdt "Central dots" iA
+\cdots 
+endsnippet
+
+context "math()"
+snippet ldt "Lower dots" iA
+\ldots 
+endsnippet
+
+context "math()"
+snippet vdt "Vertical dots" iA
+\vdots 
+endsnippet
+
+context "math()"
+snippet ddt "Diagonal dots" iA
+\ddots 
+endsnippet
+
+context "math()"
+snippet .cos "cosine" iA
+\cos 
+endsnippet
+
+context "math()"
+snippet .sin "sine" iA
+\sin
+endsnippet

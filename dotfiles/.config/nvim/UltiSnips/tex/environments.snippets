@@ -1,0 +1,191 @@
+snippet it "New item" i
+
+\item $1
+endsnippet
+
+snippet item "Itemize environment" i
+
+
+\begin{itemize}\adjustpenalty
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet enum "Enumerate environment" i
+
+
+\begin{enumerate}\adjustpenalty
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet enumi "Enumerate environment" i
+
+
+\begin{enumerate}[label=(\roman*)]\adjustpenalty
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet enumI "Enumerate environment" i
+
+
+\begin{enumerate}[label=(\Roman*)]\adjustpenalty
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet enuma "Enumerate environment" i
+
+
+\begin{enumerate}[label=(\alph*)]\adjustpenalty
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet enumA "Enumerate environment" i
+
+
+\begin{enumerate}[label=(\Alph*)]\adjustpenalty
+	\item $1
+\end{enumerate}
+endsnippet
+
+snippet mm "In line math mode" i
+\$$1\$$0
+endsnippet
+
+snippet md "In line math displaymode" i
+\$\di $1\$$0
+endsnippet
+
+snippet nn "Unnumbered equation" i
+
+
+\begin{equation*}
+	$1
+\end{equation*}
+endsnippet
+
+snippet nm "Numbered equation" i
+
+
+\begin{equation}
+	$1
+\end{equation}
+endsnippet
+
+snippet aa "Align(ed) environment" i
+
+
+\begin{align*}
+	$1
+\end{align*}
+endsnippet
+
+snippet pn "Proposition environment" i
+
+
+\begin{proposition}
+	$1
+\end{proposition}
+endsnippet
+
+snippet th "Theorem environment" i
+
+
+\begin{theorem}
+	$1
+\end{theorem}
+endsnippet
+
+snippet cc "Corollary environment" i
+
+
+\begin{corollary}
+	$1
+\end{corollary}
+endsnippet
+
+
+snippet lm "Lemma environment" i
+
+
+\begin{lemma}
+	$1
+\end{lemma}
+endsnippet
+
+snippet def "Definition environment" i
+
+
+\begin{definition}
+	$1
+\end{definition}
+endsnippet
+
+snippet rm "Remark environment" i
+
+
+\begin{remark}
+	$1
+\end{remark}
+endsnippet
+
+snippet pr "Proof environment" i
+
+\begin{proof}
+	$1
+\end{proof}
+endsnippet
+
+snippet ee "Exercise environment" i
+
+
+\begin{exercise} %Ejercicio $1
+	$2
+\end{exercise}
+endsnippet
+
+snippet pp "New paragraph" i 
+
+\par $1
+endsnippet
+
+snippet ss "Solution environment" i
+
+
+\par \textit{Solución}. $1
+endsnippet
+
+snippet sec "Numbered setion" i
+
+
+\section{$1}
+
+$2
+endsnippet
+
+snippet secn "Unnumbered section" i
+
+
+\section*{$1}
+
+$2
+endsnippet
+
+snippet sub "Numbered subsection" i
+
+
+\subsection{$1}
+
+$2
+endsnippet
+
+snippet subn "Unnumbered subsection" i
+
+
+\subsection*{$1}
+
+$2
+endsnippet

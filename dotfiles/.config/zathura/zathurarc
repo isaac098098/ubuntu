@@ -1,0 +1,59 @@
+# Copiar en ~/.config/zathura
+# Barra inferior
+set guioptions ""
+
+# Modo de ajuste de pantalla al cargar un documento
+set adjust-open "best-fit"
+
+# Imágenes no se invierten de color
+set recolor-reverse-video "false"
+
+# Fuente
+set font "CaskaydiaCove Nerd Font Bold 12"
+
+# Notificación de error
+set notification-error-bg "#2D353B"
+set notification-error-fg "#5F6F7B"
+
+# Notificación de advertencia
+set notification-warning-bg "#2D353B"
+set notification-warning-fg "#5F6F7B"
+
+# Otras notificationes
+set notification-bg "#2D353B"
+set notification-fg "#5F6F7B"
+
+# Fondo detrás del documento
+set default-bg "#272E33"
+
+# Colores para el índice
+set index-bg "#272E33"
+set index-fg "#B3AA96"
+set index-active-bg "#A7C080"
+set index-active-fg "#272E33"
+
+# Colores para la barra de comandos
+set inputbar-bg "#2D353B"
+set inputbar-fg "#5F6F7B"
+
+# Colores para la barra de estado
+set statusbar-bg "#2D353B"
+set statusbar-fg "#5F6F7B"
+
+# Coincidencias de búsqueda
+set highlight-color "#272E33"
+set highlight-active-color "#7FBBB3"
+set highlight-transparency 0
+
+# Modo nocturno (CTRL+R)
+set recolor true
+set recolor-lightcolor "#272E33"
+set recolor-darkcolor "#D3C6AA"
+
+# Menú para abrir archivos
+set completion-highlight-fg "#5B6847"
+set completion-highlight-bg "#A7C080"
+set completion-bg "#2D353B"
+set completion-fg "#5F6F7B"
+set completion-group-bg "#272E33" 
+set completion-group-fg "#5B6A75"
