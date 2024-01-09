@@ -257,7 +257,7 @@ set numberwidth=1
 
 inoremap jh <Esc>
 
-" Tkransparent bg
+" Transparent bg
 
 hi normal guibg=000000 
 
