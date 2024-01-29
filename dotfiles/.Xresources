@@ -1,5 +1,5 @@
-Sxiv.background: #000000
+Sxiv.background: #232A2E
 
-Sxiv.foreground: #00C0FF
+Sxiv.foreground: #93A974
 
-Sxiv.font: Hack-9
+Sxiv.font: IosevkaNF:size=10:weight=bold
