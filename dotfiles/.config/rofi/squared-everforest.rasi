@@ -5,10 +5,11 @@
  *******************************************************************************/
 
 * {
-    font:   "CaskaydiaCove Nerd Font 11";
+    font:   "Iosevka NF Bold 12";
 
-    bg0:     #2B3339;
+    bg0:     #2B3339F2;
     bg1:     #323D43;
+    bg2:     #323D43;
     fg0:     #D3C6AA;
 
     accent-color:     #A7C080;
@@ -24,7 +25,7 @@
 
 window {
     location:   0;
-    width:      25%;
+    width:      24%;
     height: 	36%;
     background-color:   @bg0;
 }
@@ -52,7 +53,7 @@ textbox {
 listview {
     padding:    4px 0;
     lines:      8;
-    columns:    1;
+    columns:    2;
 
     fixed-height:   true;
 }
@@ -75,7 +76,7 @@ element normal active {
 }
 
 element selected {
-    text-color: @bg0;
+    text-color: @bg2;
 }
 
 element selected normal, element selected active {

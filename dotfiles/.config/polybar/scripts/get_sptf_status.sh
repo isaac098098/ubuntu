@@ -20,7 +20,7 @@ FORMAT="{{ title }} - {{ artist }} - {{ album }}"
 update_hooks() {
     while IFS= read -r id
     do
-        polybar-msg -p "$id" hook sptf-play-pause $2 1>/dev/null 2>&1
+        polybar-msg -p "$id" hook sptf-play $2 1>/dev/null 2>&1
     done < <(echo "$1")
 }
 
@@ -37,24 +37,24 @@ if [ "$1" == "--status" ]; then
     echo "$STATUS"
 else
     if [ "$STATUS" = "Stopped" ]; then
-		polybar-msg action "#sptf.module_hide" > /dev/null
-		polybar-msg action "#sptf-prev.module_hide" > /dev/null
-		polybar-msg action "#sptf-play-pause.module_hide" > /dev/null
-		polybar-msg action "#sptf-next.module_hide" > /dev/null
+		#polybar-msg action "#sptf.module_hide" > /dev/null
+		#polybar-msg action "#sptf-prev.module_hide" > /dev/null
+		#polybar-msg action "#sptf-play-pause.module_hide" > /dev/null
+		#polybar-msg action "#sptf-next.module_hide" > /dev/null
         echo "No music is playing"
     elif [ "$STATUS" = "Paused"  ]; then
-		polybar-msg action "#sptf.module_show" > /dev/null
-		polybar-msg action "#sptf-prev.module_show" > /dev/null
-		polybar-msg action "#sptf-play-pause.module_show" > /dev/null
-		polybar-msg action "#sptf-next.module_show" > /dev/null
+		#polybar-msg action "#sptf.module_show" > /dev/null
+		#polybar-msg action "#sptf-prev.module_show" > /dev/null
+		#polybar-msg action "#sptf-play-pause.module_show" > /dev/null
+		#polybar-msg action "#sptf-next.module_show" > /dev/null
         update_hooks "$PARENT_BAR_PID" 2
         playerctl --player=$PLAYER metadata --format "$FORMAT"
 
     elif [ "$STATUS" = "No player is running"  ]; then
-		polybar-msg action "#sptf.module_hide" > /dev/null
-		polybar-msg action "#sptf-prev.module_hide" > /dev/null
-		polybar-msg action "#sptf-play-pause.module_hide" > /dev/null
-		polybar-msg action "#sptf-next.module_hide" > /dev/null
+		#polybar-msg action "#sptf.module_hide" > /dev/null
+		#polybar-msg action "#sptf-prev.module_hide" > /dev/null
+		#polybar-msg action "#sptf-play-pause.module_hide" > /dev/null
+		#polybar-msg action "#sptf-next.module_hide" > /dev/null
         echo "$STATUS"
     else
 		#polybar-msg action "#sptf.module_show" > /dev/null

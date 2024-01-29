@@ -94,7 +94,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+f fullscreen toggle; exec --no-startup-id polybar-msg cmd toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -163,11 +163,14 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 assign [class="Org.gnome.Nautilus"] $ws2
 assign [class="firefox"] $ws3
 assign [class="Google-chrome"] $ws3
+assign [class="Brave-browser"] $ws3
+assign [class="brave-browser"] $ws3
 assign [class="Zathura"] $ws4
 assign [class="Evince"] $ws4
 assign [class="Eog"] $ws5
 assign [class="Shotwell"] $ws5
 assign [class="krita"] $ws5
+assign [class="Sxiv"] $ws5
 assign [class="vlc"] $ws6
 assign [class="Vlc"] $ws6
 assign [class="kdenlive"] $ws6
@@ -185,6 +188,11 @@ assign [class="discord"] $ws9
 assign [class="zoom"] $ws10
 assign [class="transmission-gtk"] $ws10
 assign [class="Transmission-gtk"] $ws10
+
+#for_window [class="Eog"] floating enable
+#for_window [class="Shotwell"] floating enable
+#for_window [class="Nsxiv"] floating enable
+#for_window [class="Yad" title="yad-calendar"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -264,8 +272,12 @@ exec --no-startup-id dunst
 # Fondo de pantalla
 
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/1.png
-exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/2.jpg
-exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/3.png
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/2.jpg
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/3.png
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/4.jpg
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/5.jpg
+exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/6.jpg
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/7.jpg
 
 # Controles de brillo. Instalar brightnessctl y darle permisos con
 # sudo chmod +s /usr/bin/brightnessctl
@@ -282,16 +294,14 @@ title_align center
 
 # Separación entre ventanas
 
-# Sin barra
-#gaps inner 18
-#gaps outer -3
-
-# Con barra
-gaps inner 20
-gaps outer 0
+gaps inner 15
+gaps outer 10
+gaps bottom 60
+gaps left 20
+gaps right 20
 
 #smart_gaps on
-smart_borders on
+#smart_borders on
 
 # Teclado latinoamericano
 
@@ -329,8 +339,8 @@ exec --no-startup-id obsidian
 
 # Oculat/mostrar Polybar
 
-# bindsym $mod+p exec --no-startup-id polybar-msg cmd show
-# bindsym $mod+o exec --no-startup-id polybar-msg cmd hide
+bindsym $mod+p exec --no-startup-id polybar-msg cmd show
+bindsym $mod+o exec --no-startup-id polybar-msg cmd hide
 
 # xborders
 # exec --no-startup-id xborders --smart-hide-border --border-radius 8 --border-width 3 --border-rgba '#A7C080'

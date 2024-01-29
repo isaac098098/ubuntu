@@ -36,8 +36,8 @@ filetype indent on
 " everforest
 
 if has('termguicolors')
-          set termguicolors
-        endif
+	set termguicolors
+endif
 
 set background=dark
 
@@ -82,10 +82,13 @@ require("nvim-tree").setup({
 
 vim.opt.termguicolors = true 
 
+vim.g.nvim_tree_respect_buf_cwd = 1
+
 -- statusline
 
 require('lualine').setup {
 	options = {
+		theme = "everforest",
 	    icons_enabled = true,
 	    component_separators = { left = '', right = ''},
 	    section_separators = { left = '', right = ''},
@@ -103,7 +106,7 @@ require('lualine').setup {
 	      winbar = 1000,
 	    }
 	  },
-          sections = {
+        sections = {
 	    lualine_a = {'mode'},
 	    lualine_b = {'branch', 'diff', 'diagnostics'},
 		lualine_c = {{'filename',path=1}},
@@ -215,7 +218,7 @@ inoremap <silent> [ <Cmd>call UltiSnips#Anon('[$1]','','i','',1)<cr>
 inoremap <silent> " <Cmd>call UltiSnips#Anon('"$1"','','i','',1)<cr>
 "inoremap <silent> ' <Cmd>call UltiSnips#Anon("'$1'",'','i','',1)<cr>
 
-inoremap jh <Esc>
+inoremap kj <Esc>
 
 augroup vimtex
 	au!
@@ -259,7 +262,7 @@ inoremap jh <Esc>
 
 " Tkransparent bg
 
-hi normal guibg=000000 
+hi normal guibg=NONE
 
 " vimtex
 

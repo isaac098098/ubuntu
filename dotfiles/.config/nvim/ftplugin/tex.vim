@@ -1,5 +1,5 @@
 " Tiempo de actualización para guardar cambios
-" set updatetime=100
+" set updatetime=500
 
 "set tw=96
 
