@@ -1,0 +1,15 @@
+#!/bin/bash
+# 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
+cp -r ~/.config/dunst ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/i3 ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/nvim ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/picom ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/polybar ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/rofi ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/zathura ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/gtk-3.0 ~/Documentos/linux/ubuntu/dotfiles/.config
+cp -r ~/.config/gtk-4.0 ~/Documentos/linux/ubuntu/dotfiles/.config
+
+cp ~/.p10k.zsh ~/Documentos/linux/ubuntu/dotfiles/
+cp ~/.zshrc ~/Documentos/linux/ubuntu/dotfiles/
+cp ~/.Xresources ~/Documentos/linux/ubuntu/dotfiles/
