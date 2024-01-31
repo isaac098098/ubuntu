@@ -348,3 +348,6 @@ function! Tabline() abort
 endfunction
 
 set tabline=%!Tabline()
+
+" Copiar todo el documento al clipboard
+nmap <C-d> ggVG"+y

@@ -1,0 +1,64 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 980,
+       "width": 1850,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "Documento no guardado - Xournal++",
+    "percent": 1,
+    "swallows": [
+       {
+        "class": "^Xournalpp$",
+        "instance": "^xournalpp$",
+        "machine": "^isaac09809$",
+        "title": "^Documento\\ no\\ guardado\\ \\-\\ Xournal\\+\\+$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+       "height": 80,
+       "width": 928,
+       "x": 501,
+       "y": 1004
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "user_on",
+            "geometry": {
+               "height": 483,
+               "width": 918,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "nvim",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^kitty$",
+                "instance": "^kitty$",
+                "machine": "^isaac09809$",
+                "title": "^nvim$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
