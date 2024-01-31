@@ -10,6 +10,7 @@ cp -r ~/.config/zathura ~/Documentos/linux/ubuntu/dotfiles/.config
 cp -r ~/.config/gtk-3.0 ~/Documentos/linux/ubuntu/dotfiles/.config
 cp -r ~/.config/gtk-4.0 ~/Documentos/linux/ubuntu/dotfiles/.config
 cp -r ~/.config/xournalpp ~/Documentos/linux/ubuntu/dotfiles/.config
+rm -r Documentos/linux/ubuntu/dotfiles/.config/xournalpp/autosave
 
 cp ~/.p10k.zsh ~/Documentos/linux/ubuntu/dotfiles/
 cp ~/.zshrc ~/Documentos/linux/ubuntu/dotfiles/
