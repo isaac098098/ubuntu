@@ -258,8 +258,6 @@ set numberwidth=1
 
 " Power symbol
 
-inoremap jh <Esc>
-
 " Tkransparent bg
 
 hi normal guibg=NONE
