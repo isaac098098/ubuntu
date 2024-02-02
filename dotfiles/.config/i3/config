@@ -348,3 +348,5 @@ bindsym $mod+o exec --no-startup-id polybar-msg cmd hide
 # Suspensión por inactividad
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
+
+bindsym $mod+Shift+a focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, kill
