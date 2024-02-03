@@ -78,12 +78,11 @@ snippet oic "Right closed and left opened interval" iA
 \: ]$1]$0
 endsnippet
 
-context "math()"
-snippet mp "Function definition" iA
-
+#context "math()"
+snippet mp "Function definition" i
 
 \begin{align*}
-	$1:$2 & \longrightarrow $3 \\
+	$1:$2 & \longrightarrow $3 \\\
 	$4 & \longmapsto $5
 \end{align*}
 endsnippet
@@ -100,7 +99,6 @@ endsnippet
 
 context "math()"
 snippet fc "Function defined by cases" iA
-
 
 \begin{equation*}
 	$1 =
@@ -314,6 +312,11 @@ endsnippet
 context "math()"
 snippet .hp "Lowercase phi" iA
 \phi
+endsnippet
+
+context "math()"
+snippet .vhp "Lowercase varphi" iA
+\varphi
 endsnippet
 
 context "math()"
