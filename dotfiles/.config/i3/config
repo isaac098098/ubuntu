@@ -298,8 +298,8 @@ title_align center
 
 gaps inner 15
 gaps outer 10
-gaps bottom 72
-gaps top 11
+gaps bottom 60
+gaps top 5
 gaps left 20
 gaps right 20
 
