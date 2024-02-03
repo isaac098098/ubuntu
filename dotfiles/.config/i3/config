@@ -95,6 +95,7 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle; exec --no-startup-id polybar-msg cmd toggle
+#bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -275,9 +276,10 @@ exec --no-startup-id dunst
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/2.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/3.png
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/4.jpg
-#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/5.jpg
-exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/6.jpg
+exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/5.jpg
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/6.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/7.jpg
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/8.jpg
 
 # Controles de brillo. Instalar brightnessctl y darle permisos con
 # sudo chmod +s /usr/bin/brightnessctl
@@ -296,7 +298,8 @@ title_align center
 
 gaps inner 15
 gaps outer 10
-gaps bottom 60
+gaps bottom 72
+gaps top 11
 gaps left 20
 gaps right 20
 
