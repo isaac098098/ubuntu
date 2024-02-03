@@ -219,6 +219,8 @@ inoremap <silent> " <Cmd>call UltiSnips#Anon('"$1"','','i','',1)<cr>
 "inoremap <silent> ' <Cmd>call UltiSnips#Anon("'$1'",'','i','',1)<cr>
 
 inoremap kj <Esc>
+map j gj
+map k gk
 
 augroup vimtex
 	au!
