@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.00000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Minimal Top"/>
-  <property name="lastSavePath" value="/home/isaac09809/Documentos/projects/comissions/theory/anatomy/real/proko/general/2_lenguage_de_la_anatomía"/>
+  <property name="lastSavePath" value="/home/isaac09809/Documentos/projects/comissions/theory/fundamentals/drawabox/objetivos"/>
   <property name="lastOpenPath" value=""/>
   <property name="lastImagePath" value="/home/isaac09809/Imágenes"/>
   <property name="edgePanSpeed" value="20.00000000"/>
@@ -14,7 +14,7 @@
   <property name="zoomStep" value="20.00000000"/>
   <property name="zoomStepScroll" value="20.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="918"/>
+  <property name="mainWndWidth" value="730"/>
   <property name="mainWndHeight" value="985"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
