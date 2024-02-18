@@ -150,13 +150,23 @@ snippet lf "Limit of a function" iA
 endsnippet
 
 context "math()"
-snippet sup "Subindex supremum" iA
+snippet Sup "Subindex supremum" iA
 \sup_{$1} $2
 endsnippet
 
 context "math()"
-snippet inf "SUbidnex infimum" iA
+snippet Inf "Subidnex infimum" iA
 \inf_{$1} $2
+endsnippet
+
+context "math()"
+snippet sup "Supremum" iA
+\sup$1
+endsnippet
+
+context "math()"
+snippet inf "Infimum" iA
+\inf$1
 endsnippet
 
 context "math()"
@@ -230,7 +240,7 @@ snippet .hT "Capital eta" iA
 endsnippet
 
 context "math()"
-snippet .i "Lowercase iota" i
+snippet .i "Lowercase iota" iA
 \iota
 endsnippet
 
@@ -357,6 +367,46 @@ endsnippet
 context "math()"
 snippet bu "Union" iA
 \bigcup_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet bsi "Subindex only intersection" iA
+\bigcap_{$1} $2
+endsnippet
+
+context "math()"
+snippet bsu "Subindex only union" iA
+\bigcup_{$1} $2
+endsnippet
+
+context "math()"
+snippet I "Belongs to" iA
+\in
+endsnippet
+
+context "math()"
+snippet .N "Natural numbers" iA
+\N
+endsnippet
+
+context "math()"
+snippet .Z "Whole numbers" iA
+\Z
+endsnippet
+
+context "math()"
+snippet .Q "Rational numbers" iA
+\Q
+endsnippet
+
+context "math()"
+snippet .C "Complex numbers" iA
+\C
+endsnippet
+
+context "math()"
+snippet .F "Field" iA
+\F
 endsnippet
 
 context "math()"
