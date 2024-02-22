@@ -25,7 +25,22 @@ endsnippet
 
 context "math()"
 snippet sm "Sum" iA
-\sum_{$1}^{$2} $3 $0
+\sum_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet Sm "Sum with lower index only" iA
+\sum_{$1} $2
+endsnippet
+
+context "math()"
+snippet pr "Product" iA
+\prod_{$1}^{$2} $3
+endsnippet
+
+context "math()"
+snippet Pr "Product with lower index only" iA
+\prod_{$1} $2
 endsnippet
 
 context "math()"
@@ -35,66 +50,79 @@ endsnippet
 
 context "math()"
 snippet ind "Definite integral" iA
-\int_{$1}^{$2} $3 \textrm{d}$4 $0
+\int_{$1}^{$2} $3 \textrm{d}$4
+endsnippet
+
+context "math()"
+snippet inL "Lower integral" iA
+\int_{$1} $2 \textrm{d}$3
 endsnippet
 
 context "math()"
 snippet ini "Indefinite integral" iA
-\int $1 \textrm{d}$2 $0
+\int $1 \textrm{d}$2
 endsnippet
 
 context "math()"
 snippet inu "Upper improper integral" iA
-\int_{$1}^{\infty} $2 \text{d}$3 $0
+\int_{$1}^{\infty} $2 \text{d}$3
 endsnippet
 
 context "math()"
 snippet inl "Lower improper integral" iA
-\int_{-\infty}^{$1} $2 \text{d}$3 $0
+\int_{-\infty}^{$1} $2 \text{d}$3
 endsnippet
 
 context "math()"
 snippet int "Totally improper integral" iA
-\int_{-\infty}^{\infty} $1 \text{d}$3 $0
+\int_{-\infty}^{\infty} $1 \text{d}$3
 endsnippet
 
 context "math()"
 snippet oio "Open interval" iA
-\: ]$1[$0
+\: ]$1,$2[$0
 endsnippet
 
 context "math()"
 snippet cic " Closed interval" iA
-\: ]$1[$0
+\: [$1,$2]$0
 endsnippet
 
 context "math()"
 snippet cio "Left closed and right opened interval" iA
-[$1[ \: $0
+[$1,$2[ \: $0
 endsnippet
 
 context "math()"
 snippet oic "Right closed and left opened interval" iA
-\: ]$1]$0
+\: ]$1,$2]$0
+endsnippet
+
+snippet "(^|[^a-zA-Z])mp" "Function definition" rA
+`!p snip.rv = match.group(1)`
+\begin{align*}
+	$1:$2 & \longrightarrow $3 \\\\
+	$4 & \longmapsto $5
+\end{align*}
 endsnippet
 
 #context "math()"
 snippet mp "Function definition" i
 
 \begin{align*}
-	$1:$2 & \longrightarrow $3 \\\
+	$1:$2 & \longrightarrow $3 \\\\
 	$4 & \longmapsto $5
 \end{align*}
 endsnippet
 
 context "math()"
 snippet fn "Function" iA
-$1: $2 \longrightarrow $3 $0
+$1: $2 \longrightarrow $3
 endsnippet
 
 context "math()"
 snippet ef "Explicit function" iA
-$1 \longmapsto $2 $0
+$1 \longmapsto $2
 endsnippet
 
 context "math()"
@@ -129,10 +157,10 @@ snippet set "Set" iA
 \left\\{$1 \: | \: $2\right\\}
 endsnippet
 
-context "math()"
-snippet | "Absolute value " iA
-|$1|
-endsnippet
+#context "math()"
+#snippet | "Absolute value " iA
+#|$1|
+#endsnippet
 
 context "math()"
 snippet fa "For all" iA
@@ -235,7 +263,7 @@ snippet .ht "Lowercase theta" iA
 endsnippet
 
 context "math()"
-snippet .hT "Capital eta" iA
+snippet .hT "Capital Teta" iA
 \Theta
 endsnippet
 
@@ -380,8 +408,8 @@ snippet bsu "Subindex only union" iA
 endsnippet
 
 context "math()"
-snippet I "Belongs to" iA
-\in
+snippet In "Belongs to" iA
+\in 
 endsnippet
 
 context "math()"
@@ -397,6 +425,11 @@ endsnippet
 context "math()"
 snippet .Q "Rational numbers" iA
 \Q
+endsnippet
+
+context "math()"
+snippet .R "Real numbers" iA
+\R
 endsnippet
 
 context "math()"
@@ -441,32 +474,31 @@ endsnippet
 
 context "math()"
 snippet mx "Maximum of a set" iA
-\max\left\\{$1\right\\}
+\max
 endsnippet
 
 context "math()"
 snippet mn "Minimum of a set" iA
-\min\left\\{$1\right\\}
+\min
 endsnippet
 
 context "math()"
-snippet cn "Numerable/finite family" iA
+snippet sn "Numerable/finite family" iA
 \left\\{$1_\{$2\}\right\\}_\{$2=$3\}^\{$4\}
 endsnippet
 
 context "math()"
-snippet ci "Indexed family" iA
+snippet si "Indexed family" iA
 \left\\{$1_\{$2\}\right\\}_\{$2\in $3\}$4
 endsnippet
 
 context "math()"
-snippet lb "Label equation" iA
+snippet lbe "Label equation" iA
 \label{eqn:$1}
 endsnippet
 
-context "math()"
-snippet eqr "Equation reference" iA
-\eqref{eqn:$1}
+snippet rfe "Equation reference" iA
+\ref{eqn:$1}
 endsnippet
 
 context "math()"
@@ -486,7 +518,7 @@ endsnippet
 
 context "math()"
 snippet mod "Equivalence mod n" iA
-$1\equiv $2 \\:\\:(\textrm{mod }$3)
+$1\equiv $2 \\\\:\\:\mathrm{mod\:}$3
 endsnippet
 
 context "math()"
@@ -519,6 +551,11 @@ snippet cdt "Central dots" iA
 endsnippet
 
 context "math()"
+snippet Dt "Dot product" iA
+\cdot
+endsnippet
+
+context "math()"
 snippet ldt "Lower dots" iA
 \ldots 
 endsnippet
@@ -545,5 +582,783 @@ endsnippet
 
 context "math()"
 snippet nsg "Normal subgroup" iA
-\triangleleft
+\lhd
+endsnippet
+
+context "math()"
+snippet im "Implies" iA
+\implies 
+endsnippet
+
+context "math()"
+snippet ex "Exists" iA
+\exists\:
+endsnippet
+
+context "math()"
+snippet tm "Cross product" iA
+\times
+endsnippet
+
+context "math()"
+snippet dvv "Divides" iA
+\mid 
+endsnippet
+
+context "math()"
+snippet dvn "Not divides" iA
+\nmid 
+endsnippet
+
+context "math()"
+snippet hat "Hat symbol" iA
+\hat{$1}
+endsnippet
+
+context "math()"
+snippet ne "Not equal" iA
+\neq 
+endsnippet
+
+context "math()"
+snippet gr "Gradient operator" iA
+\nabla $1
+endsnippet
+
+context "math()"
+snippet div "Divergence operator" iA
+\nabla\cdot\vv{$1}
+endsnippet
+
+context "math()"
+snippet cur "Curl operator" iA
+\nabla\times\vv{$1}
+endsnippet
+
+context "math()"
+snippet der "First derivative" iA
+\frac{\textrm{d}$1}{\textrm{d}$2}
+endsnippet
+
+context "math()"
+snippet Der "nth derivative" iA
+\frac{\textrm{d}^{$1}$2}{\textrm{d}$3^{$1}}
+endsnippet
+
+context "math()"
+snippet par "Partial derivative" iA
+\frac{\partial $1}{\partial $2}
+endsnippet
+
+context "math()"
+snippet Par "nth partial derivative" iA
+\frac{\partial^{$1} $2}{\partial $3^{$1}}
+endsnippet
+
+context "math()"
+snippet vec "Arrow vector" iA
+\vv{$1}
+endsnippet
+
+context "math()"
+snippet qq "Similar symbol" iA
+\sim 
+endsnippet
+
+context "math()"
+snippet qn "Not similar symbol" iA
+\nsim 
+endsnippet
+
+context "math()"
+snippet iso "Congruent or isomorphic to symbol" iA
+\cong 
+endsnippet
+
+context "math()"
+snippet Iso "Not congruent or isomorphic to symbol" iA
+\cong 
+endsnippet
+
+context "math()"
+snippet la "Logic and" iA
+\land
+endsnippet
+
+context "math()"
+snippet lo "Logic or" iA
+\lor
+endsnippet
+
+context "math()"
+snippet inn "Inner product" iA
+\langle $1,$2 \rangle
+endsnippet
+
+context "math()"
+snippet pt "Partial symbol" iA
+\partial 
+endsnippet
+
+context "math()"
+snippet nb "Nabla operator" iA
+\nabla 
+endsnippet
+
+# Arrays
+
+## Generic
+
+context "math()"
+snippet mtgT "Generic Table matrix" iA
+\begin{matrix}
+$1_{11} & $1_{12} & \cdots & $1_{1$3} \\\\
+$1_{21} & $1_{22} & \cdots & $1_{2$3} \\\\
+\vdots & \vdots & \ddots & \vdots \\\\
+$1_{$2 1} & $1_{m2} & \cdots & $1_{$2$3}
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet mtgP "Generic Parenthesis matrix" iA
+\begin{pmatrix}
+$1_{11} & $1_{12} & \cdots & $1_{1$3} \\\\
+$1_{21} & $1_{22} & \cdots & $1_{2$3} \\\\
+\vdots & \vdots & \ddots & \vdots \\\\
+$1_{$2 1} & $1_{m2} & \cdots & $1_{$2$3}
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mtgB "Generic Bracket matrix" iA
+\begin{bmatrix}
+$1_{11} & $1_{12} & \cdots & $1_{1$3} \\\\
+$1_{21} & $1_{22} & \cdots & $1_{2$3} \\\\
+\vdots & \vdots & \ddots & \vdots \\\\
+$1_{$2 1} & $1_{m2} & \cdots & $1_{$2$3}
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mtgD "Generic matrix Determinant" iA
+\begin{vmatrix}
+$1_{11} & $1_{12} & \cdots & $1_{1$3} \\\\
+$1_{21} & $1_{22} & \cdots & $1_{2$3} \\\\
+\vdots & \vdots & \ddots & \vdots \\\\
+$1_{$2 1} & $1_{m2} & \cdots & $1_{$2$3}
+\end{vmatrix}
+endsnippet
+
+## 2x2
+
+### Automatic indexing
+
+context "math()"
+snippet mt2aT "2x2 Table matrix with Automatic indexing" iA
+\begin{matrix}
+$1_{11} & $1_{12} \\\\
+$1_{21} & $1_{22} \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet mt2aP "2x2 Prenthesis matrix with Automatic indexing" iA
+\begin{pmatrix}
+$1_{11} & $1_{12} \\\\
+$1_{21} & $1_{22} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt2aB "2x2 Bracket matrix with Automatic indexing" iA
+\begin{bmatrix}
+$1_{11} & $1_{12} \\\\
+$1_{21} & $1_{22} \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt2aD "2x2 matrix Determinant with Automatic indexing" iA
+\begin{vmatrix}
+$1_{11} & $1_{12} \\\\
+$1_{21} & $1_{22} \\\\
+\end{vmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet mt2fT "2x2 Table matrix with free indexing" iA
+\begin{matrix}
+$1 & $2 \\\\
+$3 & $4 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet mt2fP "2x2 Prenthesis matrix with free indexing" iA
+\begin{pmatrix}
+$1 & $2 \\\\
+$3 & $4 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt2fB "2x2 Bracket matrix with free indexing" iA
+\begin{bmatrix}
+$1 & $2 \\\\
+$3 & $4 \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt2fD "2x2 matrix Determinant with free indexing" iA
+\begin{vmatrix}
+$1 & $2 \\\\
+$3 & $4 \\\\
+\end{vmatrix}
+endsnippet
+
+## 3x3
+
+### Automatic indexing
+
+context "math()"
+snippet mt3aT "3x3 Table matrix with Automatic indexing" iA
+\begin{matrix}
+$1_{11} & $1_{12} & $1_{13} \\\\
+$1_{21} & $1_{22} & $1_{23} \\\\
+$1_{31} & $1_{32} & $1_{33} \\\\
+\end{matrix
+endsnippet
+
+context "math()"
+snippet mt3aP "3x3 Prenthesis matrix with Automatic indexing" iA
+\begin{pmatrix}
+$1_{11} & $1_{12} & $1_{13} \\\\
+$1_{21} & $1_{22} & $1_{23} \\\\
+$1_{31} & $1_{32} & $1_{33} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt3aB "3x3 Bracket matrix with Automatic indexing" iA
+\begin{bmatrix}
+$1_{11} & $1_{12} & $1_{13} \\\\
+$1_{21} & $1_{22} & $1_{23} \\\\
+$1_{31} & $1_{32} & $1_{33} \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt3aD "3x3 matrix Determinant with Automatic indexing" iA
+\begin{vmatrix}
+$1_{11} & $1_{12} & $1_{13} \\\\
+$1_{21} & $1_{22} & $1_{23} \\\\
+$1_{31} & $1_{32} & $1_{33} \\\\
+\end{vmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet mt3fT "3x3 Table matrix with free indexing" iA
+\begin{matrix}
+$1 & $2 & $3 \\\\
+$4 & $5 & $6 \\\\
+$7 & $8 & $9 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet mt3fP "3x3 Prenthesis matrix with free indexing" iA
+\begin{pmatrix}
+$1 & $2 & $3 \\\\
+$4 & $5 & $6 \\\\
+$7 & $8 & $9 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt3fB "3x3 Bracket matrix with free indexing" iA
+\begin{bmatrix}
+$1 & $2 & $3 \\\\
+$4 & $5 & $6 \\\\
+$7 & $8 & $9 \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt3fD "3x3 matrix Determinant with free indexing" iA
+\begin{vmatrix}
+$1 & $2 & $3 \\\\
+$4 & $5 & $6 \\\\
+$7 & $8 & $9 \\\\
+\end{vmatrix}
+endsnippet
+
+## 4x4
+
+### Automatic indexing
+
+context "math()"
+snippet mt4aT "4x4 Table matrix with Automatic indexing" iA
+\begin{matrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} \\\\
+\end{matrix
+endsnippet
+
+context "math()"
+snippet mt4aP "4x4 Prenthesis matrix with Automatic indexing" iA
+\begin{pmatrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt4aB "4x4 Bracket matrix with Automatic indexing" iA
+\begin{bmatrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt4aD "4x4 matrix Determinant with Automatic indexing" iA
+\begin{vmatrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} \\\\
+\end{vmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet mt4fT "4x4 Table matrix with free indexing" iA
+\begin{matrix}
+$1 & $2 & $3 & $4 \\\\
+$5 & $6 & $7 & $8 \\\\
+$9 & $10 & $11 & $12 \\\\
+$13 & $14 & $15 & $16 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet mt4fP "4x4 Prenthesis matrix with free indexing" iA
+\begin{pmatrix}
+$1 & $2 & $3 & $4 \\\\
+$5 & $6 & $7 & $8 \\\\
+$9 & $10 & $11 & $12 \\\\
+$13 & $14 & $15 & $16 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt4fB "4x4 Bracket matrix with free indexing" iA
+\begin{bmatrix}
+$1 & $2 & $3 & $4 \\\\
+$5 & $6 & $7 & $8 \\\\
+$9 & $10 & $11 & $12 \\\\
+$13 & $14 & $15 & $16 \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt4fD "4x4 matrix Determinant with free indexing" iA
+\begin{vmatrix}
+$1 & $2 & $3 & $4 \\\\
+$5 & $6 & $7 & $8 \\\\
+$9 & $10 & $11 & $12 \\\\
+$13 & $14 & $15 & $16 \\\\
+\end{vmatrix}
+endsnippet
+
+## 5x5
+
+### Automatic indexing
+
+context "math()"
+snippet mt5aT "5x5 Table matrix with Automatic indexing" iA
+\begin{matrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} & $1_{15} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} & $1_{25} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} & $1_{35} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} & $1_{45} \\\\
+$1_{51} & $1_{52} & $1_{53} & $1_{54} & $1_{55} \\\\
+\end{matrix
+endsnippet
+
+context "math()"
+snippet mt5aP "5x5 Prenthesis matrix with Automatic indexing" iA
+\begin{pmatrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} & $1_{15} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} & $1_{25} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} & $1_{35} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} & $1_{45} \\\\
+$1_{51} & $1_{52} & $1_{53} & $1_{54} & $1_{55} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt5aB "5x5 Bracket matrix with Automatic indexing" iA
+\begin{bmatrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} & $1_{15} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} & $1_{25} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} & $1_{35} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} & $1_{45} \\\\
+$1_{51} & $1_{52} & $1_{53} & $1_{54} & $1_{55} \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt5aD "5x5 matrix Determinant with Automatic indexing" iA
+\begin{vmatrix}
+$1_{11} & $1_{12} & $1_{13} & $1_{14} & $1_{15} \\\\
+$1_{21} & $1_{22} & $1_{23} & $1_{24} & $1_{25} \\\\
+$1_{31} & $1_{32} & $1_{33} & $1_{34} & $1_{35} \\\\
+$1_{41} & $1_{42} & $1_{43} & $1_{44} & $1_{45} \\\\
+$1_{51} & $1_{52} & $1_{53} & $1_{54} & $1_{55} \\\\
+\end{vmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet mt5fT "5x5 Table matrix with free indexing" iA
+\begin{matrix}
+$1 & $2 & $3 & $4 & $5 \\\\
+$6 & $7 & $8 & $9 & $10 \\\\
+$11 & $12 & $13 & $14 & $15 \\\\
+$16 & $17 & $18 & $19 & $20 \\\\
+$21 & $22 & $23 & $24 & $25 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet mt5fP "5x5 Prenthesis matrix with free indexing" iA
+\begin{pmatrix}
+$1 & $2 & $3 & $4 & $5 \\\\
+$6 & $7 & $8 & $9 & $10 \\\\
+$11 & $12 & $13 & $14 & $15 \\\\
+$16 & $17 & $18 & $19 & $20 \\\\
+$21 & $22 & $23 & $24 & $25 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet mt5fB "5x5 Bracket matrix with free indexing" iA
+\begin{bmatrix}
+$1 & $2 & $3 & $4 & $5 \\\\
+$6 & $7 & $8 & $9 & $10 \\\\
+$11 & $12 & $13 & $14 & $15 \\\\
+$16 & $17 & $18 & $19 & $20 \\\\
+$21 & $22 & $23 & $24 & $25 \\\\
+\end{bmatrix}
+endsnippet
+
+context "math()"
+snippet mt5fD "5x5 matrix Determinant with free indexing" iA
+\begin{vmatrix}
+$1 & $2 & $3 & $4 & $5 \\\\
+$6 & $7 & $8 & $9 & $10 \\\\
+$11 & $12 & $13 & $14 & $15 \\\\
+$16 & $17 & $18 & $19 & $20 \\\\
+$21 & $22 & $23 & $24 & $25 \\\\
+\end{vmatrix}
+endsnippet
+
+## Other arrays
+
+## Generic column vectors
+
+context "math()"
+snippet vtgT "Generic Table column vector" iA
+\begin{matrix}
+$1_{1} \\\\
+$1_{2} \\\\
+\vdots \\\\
+$1_{$2}
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vtgP "Generic Parenthesis matrix" iA
+\begin{pmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+\vdots \\\\
+$1_{$2}
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vtgB "Generic Bracket matrix" iA
+\begin{bmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+\vdots \\\\
+$1_{$2}
+\end{bmatrix}
+endsnippet
+
+## 2x1 column vectors
+
+### Automatic indexing
+
+context "math()"
+snippet vt2aT "2x1 Table column Vector with automatic indexing" iA
+\begin{matrix}
+$1_{1} \\\\
+$1_{2} \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt2aP "2x1 Parenthesis column Vector with automatic indexing" iA
+\begin{pmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt2aB "2x1 Bracket column Vector with automatic indexing" iA
+\begin{bmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+\end{bmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet vt2fT "2x1 Table column Vector with free indexing" iA
+\begin{matrix}
+$1 \\\\
+$2 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt2fP "2x1 Parenthesis column Vector with free indexing" iA
+\begin{pmatrix}
+$1 \\\\
+$2 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt2fB "2x1 Bracket column Vector with free indexing" iA
+\begin{bmatrix}
+$1 \\\\
+$2 \\\\
+\end{bmatrix}
+endsnippet
+
+## 3x1 column vectors
+
+### Automatic indexing
+
+context "math()"
+snippet vt3aT "3x1 Table column Vector with automatic indexing" iA
+\begin{matrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt3aP "3x1 Parenthesis column Vector with automatic indexing" iA
+\begin{pmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt3aB "3x1 Bracket column Vector with automatic indexing" iA
+\begin{bmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+\end{bmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet vt3fT "3x1 Table column Vector with free indexing" iA
+\begin{matrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt3fP "3x1 Parenthesis column Vector with free indexing" iA
+\begin{pmatrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt3fB "3x1 Bracket column Vector with free indexing" iA
+\begin{bmatrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+\end{bmatrix}
+endsnippet
+
+## 4x1 column vectors
+
+### Automatic indexing
+
+context "math()"
+snippet vt4aT "4x1 Table column Vector with automatic indexing" iA
+\begin{matrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+$1_{4} \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt4aP "4x1 Parenthesis column Vector with automatic indexing" iA
+\begin{pmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+$1_{4} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt4aB "4x1 Bracket column Vector with automatic indexing" iA
+\begin{bmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+$1_{4} \\\\
+\end{bmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet vt4fT "4x1 Table column Vector with free indexing" iA
+\begin{matrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+$4 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt4fP "4x1 Parenthesis column Vector with free indexing" iA
+\begin{pmatrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+$4 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt4fB "4x1 Bracket column Vector with free indexing" iA
+\begin{bmatrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+$4 \\\\
+\end{bmatrix}
+endsnippet
+
+## 5x1 column vectors
+
+### Automatic indexing
+
+context "math()"
+snippet vt5aT "5x1 Table column Vector with automatic indexing" iA
+\begin{matrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+$1_{4} \\\\
+$1_{5} \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt5aP "5x1 Parenthesis column Vector with automatic indexing" iA
+\begin{pmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+$1_{4} \\\\
+$1_{5} \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt5aB "5x1 Bracket column Vector with automatic indexing" iA
+\begin{bmatrix}
+$1_{1} \\\\
+$1_{2} \\\\
+$1_{3} \\\\
+$1_{4} \\\\
+$1_{5} \\\\
+\end{bmatrix}
+endsnippet
+
+### Free indexing
+
+context "math()"
+snippet vt5fT "5x1 Table column Vector with free indexing" iA
+\begin{matrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+$4 \\\\
+$5 \\\\
+\end{matrix}
+endsnippet
+
+context "math()"
+snippet vt5fP "5x1 Parenthesis column Vector with free indexing" iA
+\begin{pmatrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+$4 \\\\
+$5 \\\\
+\end{pmatrix}
+endsnippet
+
+context "math()"
+snippet vt5fB "5x1 Bracket column Vector with free indexing" iA
+\begin{bmatrix}
+$1 \\\\
+$2 \\\\
+$3 \\\\
+$4 \\\\
+$5 \\\\
+\end{bmatrix}
 endsnippet
