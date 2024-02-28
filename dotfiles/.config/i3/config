@@ -189,7 +189,13 @@ assign [class="zoom"] $ws10
 assign [class="transmission-gtk"] $ws10
 assign [class="Transmission-gtk"] $ws10
 assign [class="Gnome-pomodoro"] $ws10
+assign [class="pomatez"] $ws10
+assign [class="Pomatez"] $ws10
 
+for_window [class="pomatez"] floating enable, move container to workspace 10
+for_window [class="Pomatez"] floating enable, move container to workspace 10
+for_window [title="Pomatez"] floating enable, move container to workspace 10
+for_window [title="pomatez"] floating enable, move container to workspace 10
 for_window [class="Gnome-pomodoro"] floating enable
 #for_window [class="Shotwell"] floating enable
 #for_window [class="Nsxiv"] floating enable
@@ -298,12 +304,12 @@ title_align center
 
 gaps inner 15
 gaps outer 10
-gaps bottom 60
-gaps top 5
-gaps left 20
-gaps right 20
+#gaps bottom 60
+#gaps top 5
+#gaps left 20
+#gaps right 20
 
-#smart_gaps on
+smart_gaps on
 #smart_borders on
 
 # Teclado latinoamericano

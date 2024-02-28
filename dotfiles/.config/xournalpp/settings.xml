@@ -7,7 +7,7 @@
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="custom Copy"/>
   <property name="lastSavePath" value="/home/isaac09809/Documentos/academic/clases/whiteboard"/>
-  <property name="lastOpenPath" value=""/>
+  <property name="lastOpenPath" value="/home/isaac09809/Documentos/academic/clases/whiteboard"/>
   <property name="lastImagePath" value="/home/isaac09809/Imágenes"/>
   <property name="edgePanSpeed" value="20.00000000"/>
   <property name="edgePanMaxMult" value="5.00000000"/>
@@ -202,7 +202,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="83c092"/>
+      <attribute name="color" type="hex" value="ffff00"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -213,10 +213,10 @@
     </data>
     <data name="pen">
       <attribute name="color" type="hex" value="83c092"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
+      <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="BIG"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
