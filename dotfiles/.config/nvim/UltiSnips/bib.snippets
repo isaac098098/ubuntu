@@ -1,20 +1,41 @@
-snippet pap "Bibtex article" i
+snippet book "Bibtex book" i
+@book{$1,
+	author = {$2},
+	title = {$3},
+	publisher = {$4},
+	edition = {$5}
+	year = {$6},
+	ISBN = {$7} 
+}
+endsnippet
+
+snippet paper "Bibtex article" i
 @article{$1,
-	author = "$2",
-	title = "$3",
-	year = "$4",
-	publisher = "$5",
-	journal = "$6",
-	pages = "$7",
-	ISBN = "$8"
+	author = {$2},
+	title = {$3},
+	journal = {$4},
+	publisher = {$5},
+	year = {$6},
+	volume = {$7},
+	number = {$8},
+	pages = {$9--$10}
 }
 endsnippet
 
 snippet web "Bibtex website" i
 @misc{$1,
-	author = "$2",
-	title = "$3",
-	year = "$4",
+	author = {$2},
+	title = {$3},
+	year = {$4},
 	note = {\url{$5}}
+}
+endsnippet
+
+snippet phd "Bibtex PhD thesis" i
+@phdthesis{$1,
+	author   = {Eesa Alsolami},
+	title    = {An examination of keystroke dynamics for continuous user authentication},
+	school   = {Queensland University of Technology},
+	year     = {2012}
 }
 endsnippet

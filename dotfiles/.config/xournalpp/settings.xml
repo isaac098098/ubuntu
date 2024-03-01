@@ -14,12 +14,12 @@
   <property name="zoomStep" value="20.00000000"/>
   <property name="zoomStepScroll" value="20.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1850"/>
-  <property name="mainWndHeight" value="985"/>
+  <property name="mainWndWidth" value="1920"/>
+  <property name="mainWndHeight" value="1050"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="false"/>
   <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="162"/>
+  <property name="sidebarWidth" value="160"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
   <property name="menubarVisible" value="true"/>
@@ -143,6 +143,10 @@
     </data>
   </data>
   <data name="deviceClasses">
+    <data name="Logitech USB Optical Mouse">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
+    </data>
     <data name="SEMICO USB Keyboard Consumer Control">
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="0"/>
@@ -212,7 +216,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="83c092"/>
+      <attribute name="color" type="hex" value="414141"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>

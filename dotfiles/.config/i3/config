@@ -94,7 +94,8 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle; exec --no-startup-id polybar-msg cmd toggle
+# bindsym $mod+f fullscreen toggle; exec --no-startup-id polybar-msg cmd toggle
+bindsym $mod+f fullscreen toggle
 #bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -282,8 +283,8 @@ exec --no-startup-id dunst
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/2.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/3.png
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/4.jpg
-exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/5.jpg
-#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/6.jpg
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/5.jpg
+exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/6.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/7.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/8.jpg
 

@@ -8,6 +8,8 @@ set adjust-open "best-fit"
 # Imágenes no se invierten de color
 set recolor-reverse-video "false"
 
+set statusbar-basename 1
+
 # Fuente
 set font "Iosevka Nerd Font Bold 12"
 

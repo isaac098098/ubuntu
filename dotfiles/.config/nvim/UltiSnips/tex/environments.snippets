@@ -22,7 +22,7 @@ endsnippet
 snippet enumi "Enumerate environment" i
 
 
-\begin{enumerate}[label=\textnormal{(}\roman*\textnormal{)}]\adjustpenalty
+\begin{enumerate}[label=\textnormal{(\roman*)}]\adjustpenalty
 	\item $1
 \end{enumerate}
 endsnippet
@@ -30,7 +30,7 @@ endsnippet
 snippet enumI "Enumerate environment" i
 
 
-\begin{enumerate}[label=\textnormal{(}\Roman*\textnormal{)}]\adjustpenalty
+\begin{enumerate}[label=\textnormal{(\Roman*)}]\adjustpenalty
 	\item $1
 \end{enumerate}
 endsnippet
@@ -38,7 +38,7 @@ endsnippet
 snippet enuma "Enumerate environment" i
 
 
-\begin{enumerate}[label=\textnormal{(}\alph*\textnormal{)}]\adjustpenalty
+\begin{enumerate}[label=\textnormal{(\alph*)}]\adjustpenalty
 	\item $1
 \end{enumerate}
 endsnippet
@@ -46,7 +46,7 @@ endsnippet
 snippet enumA "Enumerate environment" i
 
 
-\begin{enumerate}[label=\textnormal{(}\Alph*\textnormal{)}]\adjustpenalty
+\begin{enumerate}[label=\textnormal{(\Alph*)}]\adjustpenalty
 	\item $1
 \end{enumerate}
 endsnippet
@@ -55,23 +55,19 @@ snippet "(^|[^a-zA-Z])mm" "Inline math mode" rA
 `!p snip.rv = match.group(1)`\$${1:${VISUAL:}}\$$0
 endsnippet
 
-#snippet mm "In line math mode" i
-#\$$1\$$0
-#endsnippet
-
 snippet md "In line math displaymode" i
 \$\di $1\$$0
 endsnippet
 
-snippet nn "Unnumbered equation" i
-
+snippet "(^|[^a-zA-Z])nn" "Unnumbered equation" ri
+`!p snip.rv = match.group(1)`
 \begin{equation*}
 	$1
 \end{equation*}
 endsnippet
 
-snippet nm "Numbered equation" i
-
+snippet "(^|[^a-zA-Z])nm" "Numbered equation" ri
+`!p snip.rv = match.group(1)`
 \begin{equation}
 	$1
 \end{equation}
@@ -86,50 +82,85 @@ endsnippet
 
 snippet pn "Proposition environment" i
 
-
 \begin{proposition}
 $1
 \end{proposition}
 endsnippet
 
-snippet th "Theorem environment" i
+snippet "(^|[^a-zA-Z])Pn" "Proposition with note" ri
+`!p snip.rv = match.group(1)`
+\begin{proposition}[$1]
+$2
+\end{proposition}
+endsnippet
 
+snippet th "Theorem environment" i
 
 \begin{theorem}
 $1
 \end{theorem}
 endsnippet
 
-snippet cc "Corollary environment" i
+snippet "(^|[^a-zA-Z])Th" "Theorem with note" ri
+`!p snip.rv = match.group(1)`
+\begin{theorem}[$1]
+$2
+\end{theorem}
+endsnippet
 
+snippet cc "Corollary environment" i
 
 \begin{corollary}
 $1
 \end{corollary}
 endsnippet
 
+snippet "(^|[^a-zA-Z])Cc" "Corollary with note" ri
+`!p snip.rv = match.group(1)`
+\begin{corollary}[$1]
+$2
+\end{corollary}
+endsnippet
 
 snippet lm "Lemma environment" i
-
 
 \begin{lemma}
 $1
 \end{lemma}
 endsnippet
 
-snippet def "Definition environment" i
+snippet "(^|[^a-zA-Z])Lm" "Lema with note" ri
+`!p snip.rv = match.group(1)`
+\begin{lemma}[$1]
+$2
+\end{lemma}
+endsnippet
 
+snippet def "Definition environment" i
 
 \begin{definition}
 $1
 \end{definition}
 endsnippet
 
-snippet rm "Remark environment" i
+snippet "(^|[^a-zA-Z])Def" "Definition with note" ri
+`!p snip.rv = match.group(1)`
+\begin{definition}[$1]
+$2
+\end{definition}
+endsnippet
 
+snippet rm "Remark environment" i
 
 \begin{remark}
 $1
+\end{remark}
+endsnippet
+
+snippet "(^|[^a-zA-Z])Rm" "Remark with note" ri
+`!p snip.rv = match.group(1)`
+\begin{remark}[$1]
+$2
 \end{remark}
 endsnippet
 
@@ -142,8 +173,14 @@ endsnippet
 
 snippet ee "Exercise environment" i
 
+\begin{exercise}
+$1
+\end{exercise}
+endsnippet
 
-\begin{exercise} %Ejercicio $1
+snippet "(^|[^a-zA-Z])Ee" "Exercise with note" ri
+`!p snip.rv = match.group(1)`
+\begin{exercise}[$1]
 $2
 \end{exercise}
 endsnippet
@@ -161,11 +198,10 @@ endsnippet
 
 snippet ss "Solution environment" i
 
-
-\par \textit{Solución}. $1
+\textit{Solución}. $1
 endsnippet
 
-snippet sec "Numbered setion" i
+snippet sec "Numbered section" i
 
 
 \section{$1}
@@ -327,4 +363,8 @@ snippet hl "Table horizontal line" i
 
 \hline
 
+endsnippet
+
+snippet ct "Cite from bibliography" i
+\cite{$1}
 endsnippet
