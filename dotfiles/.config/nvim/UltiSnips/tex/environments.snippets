@@ -174,14 +174,14 @@ endsnippet
 snippet ee "Exercise environment" i
 
 \begin{exercise}
-$1
+\textnormal{$1}
 \end{exercise}
 endsnippet
 
 snippet "(^|[^a-zA-Z])Ee" "Exercise with note" ri
 `!p snip.rv = match.group(1)`
 \begin{exercise}[$1]
-$2
+\textnormal{$2}
 \end{exercise}
 endsnippet
 

@@ -265,7 +265,7 @@ snippet math-notes "Mathematics notes" A
 {.} %Puntuación después del encabezado
 {0.5em} %Espacio después del encabezado
 {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Proposición [número] [nombre]
-\theoremstyle{theorem}
+\theoremstyle{proposition}
 \newtheorem{proposition}{Proposición}[section]
 
 \newtheoremstyle{corollary}
@@ -277,7 +277,7 @@ snippet math-notes "Mathematics notes" A
 {.} %Puntuación después del encabezado
 {0.5em} %Espacio después del encabezado
 {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Corolario[número] [nombre]
-\theoremstyle{theorem}
+\theoremstyle{corollary}
 \newtheorem{corollary}{Corolario}[section]
 
 \newtheoremstyle{lemma}
@@ -289,7 +289,7 @@ snippet math-notes "Mathematics notes" A
 {.} %Puntuación después del encabezado
 {0.5em} %Espacio después del encabezado
 {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Lema [número] [nombre]
-\theoremstyle{theorem}
+\theoremstyle{lemma}
 \newtheorem{lemma}{Lema}[section]
 
 \newtheoremstyle{definition}
@@ -301,7 +301,7 @@ snippet math-notes "Mathematics notes" A
 {.} %Puntuación después del encabezado
 {0.5em} %Espacio después del encabezado
 {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Definición [número] [nombre]
-\theoremstyle{theorem}
+\theoremstyle{definition}
 \newtheorem{definition}{Definición}[section]
 
 \newtheoremstyle{remark}
@@ -313,7 +313,7 @@ snippet math-notes "Mathematics notes" A
 {.} %Puntuación después del encabezado
 {0.5em} %Espacio después del encabezado
 {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Observación [número] [nombre]
-\theoremstyle{theorem}
+\theoremstyle{remark}
 \newtheorem{remark}{Observación}[section]
 
 \newtheoremstyle{exercise}
@@ -324,8 +324,8 @@ snippet math-notes "Mathematics notes" A
 {\scshape} %Fuente del encabezado
 {.} %Puntuación después del encabezado
 {0.5em} %Espacio después del encabezado
-{\thmname{#1}\thmnumber{ #2}\texnormal{\thmnote{ (#3)}}} %Ejercicio [número] [nombre]
-\theoremstyle{theorem}
+{\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Ejercicio [número] [nombre]
+\theoremstyle{exercise}
 \newtheorem{exercise}{Ejercicio}[section]
 
 \begin{document}
@@ -492,7 +492,7 @@ snippet math-ex "Math exercises" b
 {0.5em} %Espacio después del encabezado
 {\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Corolario[número] [nombre]
 \theoremstyle{corollary}
-\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{corollary}{Corolario}[section]
 
 \newtheoremstyle{lemma}
 {\topsep} %Separación superior
@@ -538,9 +538,9 @@ snippet math-ex "Math exercises" b
 {\scshape} %Fuente del encabezado
 {.} %Puntuación después del encabezado
 {0.5em} %Espacio después del encabezado
-{\thmname{#1}\thmnumber{ #2}\texnormal{\thmnote{ (#3)}}} %Ejercicio [número] [nombre]
+{\thmname{#1}\thmnumber{ #2}\textnormal{\thmnote{ (#3)}}} %Ejercicio [número] [nombre]
 \theoremstyle{exercise}
-\newtheorem{exercise}{Ejercicio}
+\newtheorem{exercise}{Ejercicio}[section]
 
 \begin{document}
 \maketitle
