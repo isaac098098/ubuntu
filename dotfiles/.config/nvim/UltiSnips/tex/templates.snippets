@@ -130,7 +130,7 @@ endsnippet
 
 snippet math-notes "Mathematics notes" A
 \documentclass[letterpaper,twoside,12pt]{article}
-\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=0.5cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
+\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=0.8cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
 \usepackage[utf8]{inputenc} %Formato de codificación
 \usepackage[activeacute,spanish,es-tabla,es-lcroman]{babel} %Acentos, 'Figura' para gráficas y 'Tabla' para tablas
 \usepackage{amsthm} %Teoremas
@@ -238,8 +238,10 @@ snippet math-notes "Mathematics notes" A
 \renewcommand{\cftsecpagefont}{} %Estilo del título de las secciones de la página
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Puntos para las secciones
 \renewcommand{\cftsecaftersnum}{.} %Punto después del número de la sección
-\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
-\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
+\renewcommand{\thesection}{\normalfont\arabic{section}} %Formato de las secciones
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} %Formato de las subsecciones
+%\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
+%\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
 \renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
 
 % Referencias
@@ -255,9 +257,10 @@ snippet math-notes "Mathematics notes" A
 \date{\vspace{-1.0cm}}
 \makeindex %Hacer el índice, no funciona con section*{}
 
-% Estructura de una sección sin número
+% Estructura de una sección sin número (en orden)
 
 %\section*{Prólogo}
+%\markboth{Prólogo}{Prólogo} %Mostrar correctamente el nombre de la sección en el header
 %\phantomsection %hyperref
 %\addcontentsline{toc}{section}{Prólogo} %Añadir a la tabla de contenidos
 
@@ -377,7 +380,7 @@ endsnippet
 
 snippet math-ex "Math exercises" b
 \documentclass[letterpaper,twoside,12pt]{article}
-\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=0.5cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
+\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=0.8cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
 \usepackage[utf8]{inputenc} %Formato de codificación
 \usepackage[activeacute,spanish,es-tabla,es-lcroman]{babel} %Acentos, 'Figura' para gráficas y 'Tabla' para tablas
 \usepackage{amsthm} %Símbolos
@@ -485,8 +488,10 @@ snippet math-ex "Math exercises" b
 \renewcommand{\cftsecpagefont}{} %Estilo del título de las secciones de la página
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Puntos para las secciones
 \renewcommand{\cftsecaftersnum}{.} %Punto después del número de la sección
-\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
-\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
+\renewcommand{\thesection}{\normalfont\arabic{section}} %Formato de las secciones
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} %Formato de las subsecciones
+%\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
+%\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
 \renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
 
 % Referencias
@@ -494,9 +499,10 @@ snippet math-ex "Math exercises" b
 %\addto{\captionsspanish}{\renewcommand{\bibname}{Bibliografía}}
 \addto{\captionsspanish}{\renewcommand{\refname}{Bibliografía}} %Título
 
-% Estructura de una sección sin número
+% Estructura de una sección sin número (en orden)
 
 %\section*{Prólogo}
+%\markboth{Prólogo}{Prólogo} %Mostrar correctamente el nombre de la sección en el header
 %\phantomsection %hyperref
 %\addcontentsline{toc}{section}{Prólogo} %Añadir a la tabla de contenidos
 
