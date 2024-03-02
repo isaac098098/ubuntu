@@ -22,6 +22,8 @@ snippet phy-art "Physics article" b
 \usepackage{natbib} %Referencias
 \usepackage{titling} %Abstract
 \usepackage{setspace} %Stretch para el abstract
+\usepackage{esvect} %Mejores flechas de vectores
+\usepackage{cellspace,makecell} %Necesario para el alineamiento Sc de tablas
 
 % Otros paquetes
 
@@ -69,10 +71,14 @@ snippet phy-art "Physics article" b
 \renewcommand{\headruleskip}{2mm} %Distancia de la regla del encabezado a su texto superior
 \fancyheadoffset{0.8cm} %Desplazamiento a los laterales de la regla superior
 
+%Espaciado de tablas Sc
+\cellspacetoplimit 11pt
+\cellspacebottomlimit 10pt
+
 % Estilos
 
 %El primer argumento es la numeración de la sección, el segundo el espacio entre dicha numeración y el texto
-\titleformat{\section}{\centering\normalsize\scshape}{\thesection.}{0.5em}{}
+\titleformat{\section}{\centering\large\scshape}{\thesection.}{0.5em}{}
 \titleformat{\subsection}{\centering\normalsize\scshape}{\thesubsection.}{0.5em}{}
 
 % Regla superior
@@ -128,7 +134,7 @@ $8
 \end{document}
 endsnippet
 
-snippet math-notes "Mathematics notes" A
+snippet math-notes "Mathematics notes" b
 \documentclass[letterpaper,twoside,12pt]{article}
 \usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=0.8cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
 \usepackage[utf8]{inputenc} %Formato de codificación
@@ -148,6 +154,7 @@ snippet math-notes "Mathematics notes" A
 \usepackage{caption} %Descripciones
 \usepackage{float} %Comportamiento de tablas
 \usepackage[titles]{tocloft} %Formato de la tabla de contenidos, 'titles' es para centrar el título
+\usepackage{cellspace,makecell} %Necesario para el alineamiento Sc de tablas
 
 % Otros paquetes
 
@@ -202,6 +209,10 @@ snippet math-notes "Mathematics notes" A
 
 \renewcommand{\headruleskip}{2mm} %Distancia de la regla del encabezado a su texto superior
 \fancyheadoffset{0.8cm} %Desplazamiento a los laterales de la regla superior
+
+%Espaciado de tablas Sc
+\cellspacetoplimit 11pt
+\cellspacebottomlimit 10pt
 
 % Estilos
 
@@ -413,6 +424,7 @@ snippet math-ex "Math exercises" b
 %\usepackage{libertinust1math}
 %\usepackage{relsize} %Aumentar escala del documento completo
 %\usepackage{scalerel} %Aumentar tamaño de símbolos
+\usepackage{cellspace,makecell} %Necesario para el alineamiento Sc de tablas
 
 % Matemáticas
 
@@ -452,6 +464,10 @@ snippet math-ex "Math exercises" b
 
 \renewcommand{\headruleskip}{2mm} %Distancia de la regla del encabezado a su texto superior
 \fancyheadoffset{0.8cm} %Desplazamiento a los laterales de la regla superior
+
+%Espaciado de tablas Sc
+\cellspacetoplimit 11pt
+\cellspacebottomlimit 10pt
 
 % Estilos
 
