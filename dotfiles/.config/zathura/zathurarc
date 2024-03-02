@@ -2,6 +2,9 @@
 # Barra inferior
 set guioptions ""
 
+# Permitir copiar al portapapeles
+set selection-clipboard clipboard
+
 # Modo de ajuste de pantalla al cargar un documento
 set adjust-open "best-fit"
 

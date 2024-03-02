@@ -130,7 +130,7 @@ endsnippet
 
 snippet math-notes "Mathematics notes" A
 \documentclass[letterpaper,twoside,12pt]{article}
-\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=1.0cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
+\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=0.5cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
 \usepackage[utf8]{inputenc} %Formato de codificación
 \usepackage[activeacute,spanish,es-tabla,es-lcroman]{babel} %Acentos, 'Figura' para gráficas y 'Tabla' para tablas
 \usepackage{amsthm} %Teoremas
@@ -147,6 +147,7 @@ snippet math-notes "Mathematics notes" A
 \usepackage{fancyhdr} %Línea horizontal del encabezado
 \usepackage{caption} %Descripciones
 \usepackage{float} %Comportamiento de tablas
+\usepackage[titles]{tocloft} %Formato de la tabla de contenidos, 'titles' es para centrar el título
 
 % Otros paquetes
 
@@ -196,8 +197,8 @@ snippet math-notes "Mathematics notes" A
 %\setlength\columnsep{0.5cm} %Separación entre columnas
 \setlength{\parskip}{0.35cm} %Separación entre párrafos
 
-\titlespacing*{\section}{0pt}{0.2cm}{0.1cm} %Espaciado de las secciones
-\titlespacing*{\subsection}{0pt}{0.2cm}{0.1cm} %Espaciado de las subsecciones
+\titlespacing*{\section}{0pt}{0.3cm}{0.1cm} %Espaciado de las secciones
+\titlespacing*{\subsection}{0pt}{0.6cm}{0.2cm} %Espaciado de las subsecciones
 
 \renewcommand{\headruleskip}{2mm} %Distancia de la regla del encabezado a su texto superior
 \fancyheadoffset{0.8cm} %Desplazamiento a los laterales de la regla superior
@@ -205,7 +206,7 @@ snippet math-notes "Mathematics notes" A
 % Estilos
 
 %El primer argumento es la numeración de la sección, el segundo el espacio entre dicha numeración y el texto
-\titleformat{\section}{\centering\large\scshape}{\thesection.}{0.5em}{} \titleformat{\subsection}{\centering\normalsize\scshape}{\thesubsection.}{0.5em}{}
+\titleformat{\section}{\centering\Large\scshape}{\thesection.}{0.5em}{} \titleformat{\subsection}{\centering\large\scshape}{\thesubsection.}{0.5em}{}
 
 % Regla superior
 
@@ -217,18 +218,48 @@ snippet math-notes "Mathematics notes" A
 
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 
-\fancyhead[LO]{\hspace{0.8cm}\small\scshape Topología I}
+\fancyhead[LO]{\hspace{0.8cm}\small\scshape\nouppercase ${1:Title}}
 \fancyhead[RO]{\small\thepage\hspace{0.8cm}}
 \fancyhead[LE]{\hspace{0.8cm}\small\thepage}
-\fancyhead[RE]{\small\scshape\leftmark\hspace{0.8cm}}
+\fancyhead[RE]{\small\scshape\nouppercase\leftmark\hspace{0.8cm}}
+
+\fancypagestyle{plain} %Estilo de encabezado y pie de página para la página "plain"
+{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+	\cfoot{\thepage}
+}
+
+% Tabla de contenidos
+
+\addto{\captionsspanish}{\renewcommand{\contentsname}{Índice general}} %Título
+\renewcommand{\cfttoctitlefont}{\scshape\Large} %Estilo del título
+\renewcommand{\cftsecfont}{\itshape} %Estilo del título de las secciones
+\renewcommand{\cftsecpagefont}{} %Estilo del título de las secciones de la página
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Puntos para las secciones
+\renewcommand{\cftsecaftersnum}{.} %Punto después del número de la sección
+\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
+\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
+\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
+
+% Referencias
+
+%\addto{\captionsspanish}{\renewcommand{\bibname}{Bibliografía}}
+\addto{\captionsspanish}{\renewcommand{\refname}{Bibliografía}} %Título
 
 % Metadata
 
-\title{\vspace{-1.3cm}\Huge\scshape ${1:Title}\vspace{-0.6cm}}
+\title{\vspace{-1.3cm}\Huge\scshape $1\vspace{-0.6cm}}
 %\date{\today}
 \author{\normalsize ${2:Professor}. \textit{ESFM-IPN}}
 \date{\vspace{-1.0cm}}
 \makeindex %Hacer el índice, no funciona con section*{}
+
+% Estructura de una sección sin número
+
+%\section*{Prólogo}
+%\phantomsection %hyperref
+%\addcontentsline{toc}{section}{Prólogo} %Añadir a la tabla de contenidos
 
 % Macros
 
@@ -330,9 +361,12 @@ snippet math-notes "Mathematics notes" A
 
 \begin{document}
 \maketitle
-\thispagestyle{empty}
-%\tableofcontents
-%\newpage
+\tableofcontents
+
+\newpage
+\thispagestyle{plain}
+\mbox{}
+\newpage
 
 \section{${3:First section}}
 
@@ -343,7 +377,7 @@ endsnippet
 
 snippet math-ex "Math exercises" b
 \documentclass[letterpaper,twoside,12pt]{article}
-\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=1.0cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
+\usepackage[left=3.0cm,right=3.0cm,top=2.5cm,bottom=2.0cm,headheight=0.5cm]{geometry} %Headheight controla la distancia de la regla del encabezado a su texto inferior
 \usepackage[utf8]{inputenc} %Formato de codificación
 \usepackage[activeacute,spanish,es-tabla,es-lcroman]{babel} %Acentos, 'Figura' para gráficas y 'Tabla' para tablas
 \usepackage{amsthm} %Símbolos
@@ -360,6 +394,7 @@ snippet math-ex "Math exercises" b
 \usepackage{fancyhdr} %Línea horizontal del encabezado
 \usepackage{caption} %Descripciones
 \usepackage{float} %Comportamiento de tablas
+\usepackage[titles]{tocloft} %Formato de la tabla de contenidos, 'titles' es para centrar el título
 
 % Otros paquetes
 
@@ -409,8 +444,8 @@ snippet math-ex "Math exercises" b
 %\setlength\columnsep{0.5cm} %Separación entre columnas
 \setlength{\parskip}{0.35cm} %Separación entre párrafos
 
-\titlespacing*{\section}{0pt}{0.2cm}{0.1cm} %Espaciado de las secciones
-\titlespacing*{\subsection}{0pt}{0.2cm}{0.1cm} %Espaciado de las subsecciones
+\titlespacing*{\section}{0pt}{0.3cm}{0.1cm} %Espaciado de las secciones
+\titlespacing*{\subsection}{0pt}{0.6cm}{0.2cm} %Espaciado de las subsecciones
 
 \renewcommand{\headruleskip}{2mm} %Distancia de la regla del encabezado a su texto superior
 \fancyheadoffset{0.8cm} %Desplazamiento a los laterales de la regla superior
@@ -430,14 +465,44 @@ snippet math-ex "Math exercises" b
 
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 
-\fancyhead[LO]{\hspace{0.8cm}\small\scshape Topología I}
+\fancyhead[LO]{\hspace{0.8cm}\small\scshape\nouppercase ${1:Title}}
 \fancyhead[RO]{\small\thepage\hspace{0.8cm}}
 \fancyhead[LE]{\hspace{0.8cm}\small\thepage}
-\fancyhead[RE]{\small\scshape\leftmark\hspace{0.8cm}}
+\fancyhead[RE]{\small\scshape\nouppercase\leftmark\hspace{0.8cm}}
+
+\fancypagestyle{plain} %Estilo de encabezado y pie de página para la página "plain"
+{
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+	\cfoot{\thepage}
+}
+
+% Tabla de contenidos
+
+\addto{\captionsspanish}{\renewcommand{\contentsname}{Índice general}} %Título
+\renewcommand{\cfttoctitlefont}{\scshape\Large} %Estilo del título
+\renewcommand{\cftsecfont}{\itshape} %Estilo del título de las secciones
+\renewcommand{\cftsecpagefont}{} %Estilo del título de las secciones de la página
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Puntos para las secciones
+\renewcommand{\cftsecaftersnum}{.} %Punto después del número de la sección
+\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
+\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
+\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
+
+% Referencias
+
+%\addto{\captionsspanish}{\renewcommand{\bibname}{Bibliografía}}
+\addto{\captionsspanish}{\renewcommand{\refname}{Bibliografía}} %Título
+
+% Estructura de una sección sin número
+
+%\section*{Prólogo}
+%\phantomsection %hyperref
+%\addcontentsline{toc}{section}{Prólogo} %Añadir a la tabla de contenidos
 
 % Metadata
 
-\title{\vspace{-1.3cm}\Huge\scshape ${1:Title}\vspace{-0.6cm}}
+\title{\vspace{-1.3cm}\Huge\scshape $1\vspace{-0.6cm}}
 %\date{\today}
 \author{\normalsize ${2:Professor}. \textit{ESFM-IPN}}
 \date{\vspace{-1.0cm}}
@@ -544,9 +609,8 @@ snippet math-ex "Math exercises" b
 
 \begin{document}
 \maketitle
-\thispagestyle{empty}
-%\tableofcontents
-%\newpage
+\tableofcontents
+\newpage
 
 \section{${3:First section}}
 
@@ -667,8 +731,8 @@ endsnippet
 
 snippet bib "Bibliography" b
 
+\phantomsection
 \bibliography{bibliography}
-\renewcommand\bibname{Referencias}
 \bibliographystyle{siam}
 \Urlmuskip=0mu plus 1mu\relax
 %\phantom{\cite{}}
