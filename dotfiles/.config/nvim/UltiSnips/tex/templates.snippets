@@ -161,6 +161,7 @@ snippet math-notes "Mathematics notes" b
 \usepackage{float} %Comportamiento de tablas
 \usepackage[titles]{tocloft} %Formato de la tabla de contenidos, 'titles' es para centrar el título
 \usepackage{cellspace,makecell} %Necesario para el alineamiento Sc de tablas
+\usepackage[skip=0pt,tocskip=2pt,indent=0pt]{parskip} %Separación entre párrafos, separación entre secciones de la tabla de contenidos y sangría
 
 % Otros paquetes
 
@@ -206,12 +207,12 @@ snippet math-notes "Mathematics notes" b
 \makeatother 
 
 \linespread{1} %Interlineado
-\setlength\parindent{0pt} %Sangría de párrafos
+%\setlength\parindent{0pt} %Sangría de párrafos
 %\setlength\columnsep{0.5cm} %Separación entre columnas
-\setlength{\parskip}{0.35cm} %Separación entre párrafos
+%\setlength{\parskip}{0.35cm} %Separación entre párrafos
 
-\titlespacing*{\section}{0pt}{0.3cm}{0.1cm} %Espaciado de las secciones
-\titlespacing*{\subsection}{0pt}{0.6cm}{0.2cm} %Espaciado de las subsecciones
+\titlespacing*{\section}{0pt}{0.6cm}{0.6cm} %Espaciado de las secciones
+\titlespacing*{\subsection}{0pt}{0.9cm}{0.4cm} %Espaciado de las subsecciones
 
 \renewcommand{\headruleskip}{2mm} %Distancia de la regla del encabezado a su texto superior
 \fancyheadoffset{0.8cm} %Desplazamiento a los laterales de la regla superior
@@ -260,7 +261,8 @@ snippet math-notes "Mathematics notes" b
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} %Formato de las subsecciones
 %\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
 %\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
-\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
+%\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
+\addtocontents{toc}{\vspace{-0.5cm}} %Espacio después del título
 
 % Referencias
 
@@ -422,6 +424,7 @@ snippet math-ex "Math exercises" b
 \usepackage{caption} %Descripciones
 \usepackage{float} %Comportamiento de tablas
 \usepackage[titles]{tocloft} %Formato de la tabla de contenidos, 'titles' es para centrar el título
+\usepackage[skip=0pt,tocskip=2pt,indent=0pt]{parskip} %Separación entre párrafos, separación entre secciones de la tabla de contenidos y sangría
 
 % Otros paquetes
 
@@ -468,12 +471,12 @@ snippet math-ex "Math exercises" b
 \makeatother 
 
 \linespread{1} %Interlineado
-\setlength\parindent{0pt} %Sangría de párrafos
+%\setlength\parindent{0pt} %Sangría de párrafos
 %\setlength\columnsep{0.5cm} %Separación entre columnas
-\setlength{\parskip}{0.35cm} %Separación entre párrafos
+%\setlength{\parskip}{0.35cm} %Separación entre párrafos
 
-\titlespacing*{\section}{0pt}{0.3cm}{0.1cm} %Espaciado de las secciones
-\titlespacing*{\subsection}{0pt}{0.6cm}{0.2cm} %Espaciado de las subsecciones
+\titlespacing*{\section}{0pt}{0.6cm}{0.6cm} %Espaciado de las secciones
+\titlespacing*{\subsection}{0pt}{0.9cm}{0.4cm} %Espaciado de las subsecciones
 
 \renewcommand{\headruleskip}{2mm} %Distancia de la regla del encabezado a su texto superior
 \fancyheadoffset{0.8cm} %Desplazamiento a los laterales de la regla superior
@@ -522,7 +525,8 @@ snippet math-ex "Math exercises" b
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} %Formato de las subsecciones
 %\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
 %\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
-\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
+%\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
+\addtocontents{toc}{\vspace{-0.5cm}} %Espacio después del título
 
 % Referencias
 
