@@ -80,22 +80,22 @@ endsnippet
 
 context "math()"
 snippet oio "Open interval" iA
-\: ]$1,$2[$0
+\: ]$1,$2[
 endsnippet
 
 context "math()"
 snippet cic " Closed interval" iA
-\: [$1,$2]$0
+[$1,$2]
 endsnippet
 
 context "math()"
 snippet cio "Left closed and right opened interval" iA
-[$1,$2[ \: $0
+[$1,$2[ \: 
 endsnippet
 
 context "math()"
 snippet oic "Right closed and left opened interval" iA
-\: ]$1,$2]$0
+\: ]$1,$2]
 endsnippet
 
 snippet "(^|[^a-zA-Z])mp" "Function definition" rA
@@ -485,6 +485,16 @@ endsnippet
 context "math()"
 snippet sbq "Subset or equal" iA
 \subseteq 
+endsnippet
+
+context "math()"
+snippet sps "Contains" iA
+\supset 
+endsnippet
+
+context "math()"
+snippet spq "Contains or equals" iA
+\supseteq 
 endsnippet
 
 context "math()"
