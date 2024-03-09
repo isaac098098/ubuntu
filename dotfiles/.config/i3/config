@@ -173,6 +173,7 @@ assign [class="Eog"] $ws5
 assign [class="Shotwell"] $ws5
 assign [class="krita"] $ws5
 assign [class="Sxiv"] $ws5
+assign [class="PureRef"] $ws5
 assign [class="vlc"] $ws6
 assign [class="Vlc"] $ws6
 assign [class="kdenlive"] $ws6
