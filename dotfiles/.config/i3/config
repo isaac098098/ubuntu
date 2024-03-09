@@ -365,3 +365,7 @@ bindsym $mod+Shift+a focus parent, focus parent, focus parent, focus parent, foc
 # Krita
 workspace 5 gaps inner 0
 workspace 5 gaps outer 0
+
+# Ventana de capas de krita
+bindsym $mod+c [title="Capas"] move scratchpad
+bindsym $mod+z [title="Capas"] scratchpad show
