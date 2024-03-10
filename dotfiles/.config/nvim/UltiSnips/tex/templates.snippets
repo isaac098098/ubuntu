@@ -225,7 +225,7 @@ snippet math-notes "Mathematics notes" b
 
 %El primer argumento es la numeración de la sección, el segundo el espacio entre dicha numeración y el texto
 \titleformat{\section}{\centering\large\scshape}{\thesection.}{0.5em}{}
-\titleformat{\subsection}{\centering\normalsize\scshape}{\thesubsection.}{0.5em}{}
+\titleformat{\subsection}{\centering\normalsize\scshape}{\thesubsection}{0.5em}{}
 
 % Regla superior
 
@@ -258,7 +258,7 @@ snippet math-notes "Mathematics notes" b
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Puntos para las secciones
 \renewcommand{\cftsecaftersnum}{.} %Punto después del número de la sección
 \renewcommand{\thesection}{\normalfont\arabic{section}} %Formato de las secciones
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} %Formato de las subsecciones
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.} %Formato de las subsecciones
 %\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
 %\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
 %\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
@@ -510,7 +510,7 @@ snippet math-ex "Math exercises" b
 
 %El primer argumento es la numeración de la sección, el segundo el espacio entre dicha numeración y el texto
 \titleformat{\section}{\centering\large\scshape}{\thesection.}{0.5em}{}
-\titleformat{\subsection}{\centering\normalsize\scshape}{\thesubsection.}{0.5em}{}
+\titleformat{\subsection}{\centering\normalsize\scshape}{\thesubsection}{0.5em}{}
 
 % Regla superior
 
@@ -543,7 +543,7 @@ snippet math-ex "Math exercises" b
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Puntos para las secciones
 \renewcommand{\cftsecaftersnum}{.} %Punto después del número de la sección
 \renewcommand{\thesection}{\normalfont\arabic{section}} %Formato de las secciones
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} %Formato de las subsecciones
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.} %Formato de las subsecciones
 %\renewcommand{\thesection}{\normalfont\Roman{section}} %Formato de las secciones
 %\renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}} %Formato de las subsecciones
 %\renewcommand{\cftsecafterpnum}{\vskip2pt} %Separación entre secciones
