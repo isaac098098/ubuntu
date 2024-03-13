@@ -147,13 +147,18 @@ snippet ab "Brackets" iA
 endsnippet
 
 context "math()"
-snippet as "Square brackets" iA
+snippet ac "Square brackets" iA
 \left[$1\right]$2
 endsnippet
 
 context "math()"
+snippet as "Absolute value" iA
+\left|$1\right|$2
+endsnippet
+
+context "math()"
 snippet set "Set" iA
-\left\\{$1 \: | \: $2\right\\}
+\left\\{$1 \: : \: $2\right\\}
 endsnippet
 
 #context "math()"
@@ -163,7 +168,7 @@ endsnippet
 
 context "math()"
 snippet fa "For all" iA
-\forall \: $1
+\:\forall \: $1
 endsnippet
 
 context "math()"
@@ -686,6 +691,11 @@ endsnippet
 context "math()"
 snippet im "Implies" iA
 \implies 
+endsnippet
+
+context "math()"
+snippet if "If and only if" iA
+\iff 
 endsnippet
 
 context "math()"

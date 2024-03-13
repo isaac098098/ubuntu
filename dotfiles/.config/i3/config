@@ -284,8 +284,8 @@ exec --no-startup-id dunst
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/2.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/3.png
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/4.jpg
-#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/5.jpg
-exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/6.jpg
+exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/5.jpg
+#exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/6.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/7.jpg
 #exec_always --no-startup-id feh --bg-scale /home/isaac09809/Documentos/images/wallpapers/8.jpg
 
