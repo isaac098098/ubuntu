@@ -345,7 +345,7 @@ bindsym $mod+t exec --no-startup-id killall unclutter
 # Pomodoro y to-do
 
 #exec --no-startup-id i3-msg "workspace number 7; append_layout /home/isaac09809/.config/i3/obsidian.json"
-exec --no-startup-id gnome-pomodoro
+#exec --no-startup-id gnome-pomodoro
 exec --no-startup-id obsidian
 
 # Oculat/mostrar Polybar
@@ -365,6 +365,14 @@ bindsym $mod+Shift+a focus parent, focus parent, focus parent, focus parent, foc
 # Krita
 workspace 5 gaps inner 0
 workspace 5 gaps outer 0
+
+# Games
+workspace 8 gaps inner 0
+workspace 8 gaps outer 0
+
+# Obsidian
+workspace 7 gaps inner 0
+workspace 7 gaps outer 0
 
 # Ventana de capas de krita
 bindsym $mod+c [title="Capas"] move scratchpad

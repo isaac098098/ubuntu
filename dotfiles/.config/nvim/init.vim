@@ -223,10 +223,10 @@ inoremap kj <Esc>
 map j gj
 map k gk
 
-augroup vimtex
-	au!
-	au User VimtexEventCompiling VimtexView
-augroup END
+"augroup vimtex
+	"au!
+	"au User VimtexEventCompiling VimtexView
+"augroup END
 
 " vim-snippets
 "

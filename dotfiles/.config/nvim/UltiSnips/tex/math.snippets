@@ -9,13 +9,23 @@ snippet ff "Math mode fraction" iA
 endsnippet
 
 context "math()"
-snippet : "Superscript" iA
+snippet : "Complete superscript" iA
 ^{$1}
 endsnippet
 
 context "math()"
-snippet ; "Subscript" iA
+snippet ; "Complete subscript" iA
 _{$1}
+endsnippet
+
+context "math()"
+snippet < "Superscript" iA
+^
+endsnippet
+
+context "math()"
+snippet , "Subscript" iA
+_
 endsnippet
 
 context "math()"
