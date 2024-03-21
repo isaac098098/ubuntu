@@ -202,8 +202,24 @@ snippet "(^|[^a-zA-Z])Ee" "Exercise with note" ri
 `!p snip.rv = match.group(1)`
 
 \begin{exercise}[$1]
-\textnormal{$2}
+
 \end{exercise}
+endsnippet
+
+snippet ej "Example environment" i
+
+
+\begin{example}
+$1
+\end{example}
+endsnippet
+
+snippet "(^|[^a-zA-Z])Ej" "Example with note" ri
+`!p snip.rv = match.group(1)`
+
+\begin{example}[$1]
+
+\end{example}
 endsnippet
 
 snippet pp "Big paragraph skip" i 
