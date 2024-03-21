@@ -157,14 +157,19 @@ snippet as "Absolute value" iA
 endsnippet
 
 context "math()"
-snippet set "Set" iA
+snippet setd "Set" iA
 \left\\{$1 \: : \: $2\right\\}
 endsnippet
 
-#context "math()"
-#snippet | "Absolute value " iA
-#|$1|
-#endsnippet
+context "math()"
+snippet setb "Set" iA
+\left\\{$1 \: \mid \: $2\right\\}
+endsnippet
+
+context "math()"
+snippet setI "Set" iA
+\left\\{$1 \mid $2\right\\}
+endsnippet
 
 context "math()"
 snippet fa "For all" iA
@@ -825,7 +830,7 @@ endsnippet
 
 context "math()"
 snippet .T "Topology symbol" iA
-\tp 
+\tp
 endsnippet
 
 context "math()"
