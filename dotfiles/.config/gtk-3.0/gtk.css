@@ -15,5 +15,5 @@ menu,
 window decoration {
     margin: 0;
     padding: 0;
-    border: none;
+    border: 3px;
 }

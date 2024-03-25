@@ -8,7 +8,7 @@ Plug 'lervag/vimtex'
 
 Plug 'nvim-lualine/lualine.nvim'
 
-Plug 'sainnhe/everforest'
+Plug 'nordtheme/vim'
 
 Plug 'nvim-tree/nvim-tree.lua'
 
@@ -32,8 +32,7 @@ call plug#end()
 
 filetype plugin on
 filetype indent on
-
-" everforest
+syntax on
 
 if has('termguicolors')
 	set termguicolors
@@ -41,11 +40,9 @@ endif
 
 set background=dark
 
-colorscheme everforest
+colorscheme nord
 
-let g:everforest_background = 'medium'
-
-let g:everforest_better_performance = 1
+:highlight CocFloating guibg=#434C5E
 
 " nvim-tree
 
@@ -88,10 +85,9 @@ vim.g.nvim_tree_respect_buf_cwd = 1
 
 require('lualine').setup {
 	options = {
-		theme = "everforest",
 	    icons_enabled = true,
-	    component_separators = { left = '', right = ''},
-	    section_separators = { left = '', right = ''},
+	    component_separators = { left = '', right = ''},
+	    section_separators = { left = '', right = ''},
 	    disabled_filetypes = {
           statusline = {},
 	      winbar = {},
@@ -263,7 +259,7 @@ set numberwidth=1
 
 " Tkransparent bg
 
-hi normal guibg=NONE
+" hi normal guibg=NONE
 
 " vimtex
 
@@ -305,7 +301,6 @@ augroup vimtex
 	au User VimtexEventCompiling VimtexView
 augroup END
 
-
 " Tab size
 
 set tabstop=4
@@ -314,7 +309,7 @@ set shiftwidth=4
 " Título de las pestañas 
 
 function! Tabline() abort
-    let l:line = ''
+    let l:line = ' '
     let l:current = tabpagenr()
 
     for l:i in range(1, tabpagenr('$'))

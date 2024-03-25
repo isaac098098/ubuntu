@@ -1,64 +1,57 @@
-# Copiar en ~/.config/zathura
-# Barra inferior
 set guioptions ""
 
-# Permitir copiar al portapapeles
 set selection-clipboard clipboard
 
-# Modo de ajuste de pantalla al cargar un documento
 set adjust-open "best-fit"
 
-# Imágenes no se invierten de color
 set recolor-reverse-video "false"
+
+set highlight-transparency 0
+
+set font "IosevkaNerdFont Bold 12"
 
 set statusbar-basename 1
 
-# Fuente
-set font "Iosevka Nerd Font Bold 12"
+# Base16 Nord
+# Author: arcticicestudio
 
-# Notificación de error
-set notification-error-bg "#2D353B"
-set notification-error-fg "#5F6F7B"
+set default-bg                  "#2E3440"
+set default-fg                  "#81A1C1"
 
-# Notificación de advertencia
-set notification-warning-bg "#2D353B"
-set notification-warning-fg "#5F6F7B"
+set statusbar-fg                "#FFFFFF"
+set statusbar-bg                "#3B4252"
 
-# Otras notificationes
-set notification-bg "#2D353B"
-set notification-fg "#5F6F7B"
+set inputbar-bg                 "#2E3440"
+set inputbar-fg                 "#81A1C1"
 
-# Fondo detrás del documento
-set default-bg "#272E33"
+set notification-bg             "#2E3440"
+set notification-fg             "#FFFFFF"
 
-# Colores para el índice
-set index-bg "#272E33"
-set index-fg "#B3AA96"
-set index-active-bg "#A7C080"
-set index-active-fg "#272E33"
+set notification-error-bg       "#2E3440"
+set notification-error-fg       "#FFFFFF"
 
-# Colores para la barra de comandos
-set inputbar-bg "#2D353B"
-set inputbar-fg "#5F6F7B"
+set notification-warning-bg     "#2E3440"
+set notification-warning-fg     "#FFFFFF"
 
-# Colores para la barra de estado
-set statusbar-bg "#2D353B"
-set statusbar-fg "#5F6F7B"
+set highlight-color             "#EBCB8B"
+set highlight-active-color      "#81A1C1"
 
-# Coincidencias de búsqueda
-set highlight-color "#272E33"
-set highlight-active-color "#7FBBB3"
-set highlight-transparency 0
+set completion-bg               "#3B4252"
+set completion-fg               "#81A1C1"
 
-# Modo nocturno (CTRL+R)
-set recolor true
-set recolor-lightcolor "#272E33"
-set recolor-darkcolor "#D3C6AA"
+set completion-highlight-fg     "#8FBCBB"
+set completion-highlight-bg     "#81A1C1"
 
-# Menú para abrir archivos
-set completion-highlight-fg "#5B6847"
-set completion-highlight-bg "#A7C080"
-set completion-bg "#2D353B"
-set completion-fg "#5F6F7B"
-set completion-group-bg "#272E33" 
-set completion-group-fg "#5B6A75"
+set completion-group-fg     	"#8FBCBB"
+set completion-group-bg     	"#2E3440"
+
+set recolor-lightcolor          "#2E3440"
+set recolor-darkcolor           "#ECEFF4"
+
+set recolor                     "false"
+set recolor-keephue             "false"
+
+set index-bg 					"#272E33"
+set index-fg					"#B3AA96"
+set index-active-bg 			"#A7C080"
+set index-active-fg 			"#272E33"
