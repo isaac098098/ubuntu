@@ -194,6 +194,7 @@ assign [class="Gnome-pomodoro"] $ws10
 
 for_window [class="Gnome-pomodoro"] floating enable
 for_window [class="Gnome-calculator"] floating enable
+for_window [class="Gpick"] floating enable
 
 # reload the configuration file
 
@@ -298,8 +299,8 @@ title_align center
 
 # Separación entre ventanas
 
-gaps inner 15
-gaps outer 10
+gaps inner 20
+gaps outer 12
 #gaps bottom 60
 #gaps top 5
 #gaps left 20
